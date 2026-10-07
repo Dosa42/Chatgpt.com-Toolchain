@@ -33,6 +33,18 @@ The initial scope includes:
 
 Additional languages and toolchains may be added later. Supported platforms, architectures, compiler versions, and build targets will be documented as they are defined and implemented.
 
+## Dynamic source delivery
+
+Source delivery is selected according to the current build request. Supported delivery paths are part of the intended design:
+
+- Source code prepared in the ChatGPT environment and pushed to this repository.
+- Source code obtained from another GitHub repository.
+- A specific commit or ref identifying the source to build.
+
+These are alternative delivery paths, not a requirement to use all of them for every build. The agent selects the appropriate path and records which source was used.
+
+Build values, compiler requirements, dependencies, and targets are determined from the actual source, the requested outcome, and the selected workflow. They should be configurable where needed rather than requiring one fixed set of choices for every project.
+
 ## Request-driven build flow
 
 For example, a user asks the agent to build specified Rust source code using this repository.
@@ -49,11 +61,38 @@ The intended flow is:
 
 The requested trigger model is manual dispatch: builds start when requested, rather than automatically on pushes, pull requests, or a schedule.
 
-The exact dispatch interface, workflow inputs, source-code delivery method, and artifact retrieval mechanism still need to be discussed and implemented.
+The implementation must support this flow and dynamic source delivery. Concrete input schemas, dispatch integration, and artifact retrieval will be designed as part of the infrastructure.
+
+## Repository organization
+
+The repository root is organized by language or toolchain, starting with `Rust/`, `Go/`, `C/`, and `C++/`.
+
+Each language directory contains task-specific subdirectories. Each task directory groups its instructions, scripts, and supporting configuration so an agent can understand and use that build capability in one place.
+
+| Location | Purpose |
+| --- | --- |
+| `README.md` | Project purpose, build flow, and repository navigation. |
+| `Rust/<task>/` | Instructions, scripts, and configuration for a Rust build task. |
+| `Go/<task>/` | Instructions, scripts, and configuration for a Go build task. |
+| `C/<task>/` | Instructions, scripts, and configuration for a C build task. |
+| `C++/<task>/` | Instructions, scripts, and configuration for a C++ build task. |
+| `.github/workflows/` | Executable GitHub Actions workflow entry points for those tasks. |
+
+These paths describe the intended organization; task directories and workflows will be added with their implementations.
+
+### GitHub Actions workflow placement
+
+GitHub requires executable workflow YAML files to reside in `.github/workflows/`. A workflow stored only in a language's task directory cannot serve as a GitHub Actions entry point.
+
+The implementation therefore keeps the workflow entry point in GitHub's required location and the corresponding instructions, scripts, and supporting configuration in the language's task directory. The entry point invokes the corresponding scripts or actions from that directory.
+
+Each task's instructions must identify its workflow entry point, and each entry point must clearly identify the task it runs. Maintain one executable workflow definition for each entry point rather than independent copies in both locations.
+
+Reference: [GitHub Actions workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax).
 
 ## Workflow organization and drift prevention
 
-The infrastructure will be organized into multiple workflow and action files. Agents should be able to find the appropriate toolchain without rebuilding the infrastructure from scratch for every request.
+Agents should be able to find the appropriate toolchain without rebuilding the infrastructure from scratch for every request.
 
 **Consistent organization and prevention of configuration drift are core project requirements.**
 
@@ -65,7 +104,7 @@ As the repository grows:
 - Changes for individual builds should not cause workflows to accumulate conflicting or unexplained configurations.
 - Each workflow should clearly document its purpose, requirements, configurable values, and outputs.
 
-The exact directory structure, shared components, version policy, and rules for maintaining this consistency are still to be designed.
+The language-based root structure and task-specific organization are established. Concrete build tasks and their implementation details will be added within this structure.
 
 ## Current status
 
@@ -78,6 +117,8 @@ The confirmed direction is:
 - Agents find or create the appropriate workflow and configure it for the source being built.
 - Builds start on request.
 - Results are brought back to ChatGPT.
+- Source delivery is dynamic: source can be pushed from ChatGPT or obtained from another repository and commit/ref.
+- The repository is organized into language directories and task-specific subdirectories, with workflow entry points in GitHub's required location.
 - Infrastructure organization and drift prevention are central requirements.
 
 Build workflows and toolchain implementations have not yet been added. The integration details remain to be specified.
@@ -86,6 +127,6 @@ Build workflows and toolchain implementations have not yet been added. The integ
 
 Read this README before extending the repository.
 
-Keep implementation aligned with the confirmed build flow and execution boundary. Reuse suitable infrastructure, document new capabilities, and distinguish planned features from working features.
+Keep implementation aligned with the confirmed build flow, directory organization, and execution boundary. Derive technical build settings from the source and requested result. Reuse suitable infrastructure, document new capabilities, and distinguish planned features from working features.
 
 Report build success only when an actual GitHub Actions run supports that result. Update this README as implementation decisions and verified capabilities become available.
