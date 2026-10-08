@@ -413,10 +413,17 @@
           "source_toolchain_precedence": [
             "request_override",
             "source_toolchain_file",
-            "repository_default"
+            "target_build_std_nightly_default",
+            "repository_stable_default"
           ],
           "workflow_operation": "workflow_regenerate",
-          "validation_operation": "static_validate"
+          "validation_operation": "static_validate",
+          "target_build_std_default": {
+            "target_field": "build_std",
+            "channel_pin": "Rust/toolchains/pins.json#/nightly",
+            "component": "rust-src",
+            "rustup_target": null
+          }
         },
         "workflow_regenerate": {
           "argv": [

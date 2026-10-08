@@ -35,8 +35,9 @@ def base(context, operation, selection=True, target=True, profile=True):
         command.append("--locked")
     if build.get("offline"):
         command.append("--offline")
-    if build.get("build_std"):
-        command.extend(("-Z", "build-std=" + ",".join(build["build_std"])))
+    build_std = build.get("build_std", context.target.get("build_std", []))
+    if build_std:
+        command.extend(("-Z", "build-std=" + ",".join(build_std)))
     for option in build.get("cargo_config", []):
         command.extend(("--config", option))
     return command

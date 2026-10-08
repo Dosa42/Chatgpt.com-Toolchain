@@ -3,7 +3,11 @@
   "family": "apple-mobile",
   "runner": "macos-15",
   "can_execute": false,
-  "rustup_target": "aarch64-apple-visionos-sim",
+  "rustup_target": null,
   "verification_status": "not-run",
-  "sdk": "xrsimulator"
+  "sdk": "xrsimulator",
+  "build_std": [
+    "std",
+    "panic_abort"
+  ]
 }

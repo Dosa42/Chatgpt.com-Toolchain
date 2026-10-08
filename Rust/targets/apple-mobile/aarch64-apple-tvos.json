@@ -3,7 +3,11 @@
   "family": "apple-mobile",
   "runner": "macos-15",
   "can_execute": false,
-  "rustup_target": "aarch64-apple-tvos",
+  "rustup_target": null,
   "verification_status": "not-run",
-  "sdk": "appletvos"
+  "sdk": "appletvos",
+  "build_std": [
+    "std",
+    "panic_abort"
+  ]
 }

@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "verify-linux-20261008-0723",
+  "task": "verify-infrastructure",
+  "source": {
+    "path": "Rust/verification/projects"
+  }
+}

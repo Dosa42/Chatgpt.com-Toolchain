@@ -39,8 +39,10 @@ def setup(context):
     source = toolchain_spec(context.project, context.source_root)
     if source.get("path") and not requested.get("channel"):
         raise BuildError("A source-local custom toolchain requires an explicit installed channel")
-    requested_channel = requested.get("channel") or source.get("channel") or read_json(
-        RUST / "toolchains/pins.json")["rust"]
+    build_std = context.request.get("build", {}).get("build_std", context.target.get("build_std", []))
+    pins = read_json(RUST / "toolchains/pins.json")
+    requested_channel = requested.get("channel") or source.get("channel") or pins[
+        "nightly" if build_std else "rust"]
     if not re.fullmatch(r"[A-Za-z0-9_.-]+", requested_channel):
         raise BuildError("Invalid toolchain channel")
     for argv in requested.get("setup_commands", []):
@@ -65,10 +67,11 @@ def setup(context):
         active_tasks.update(case["task"] for case in suite["cases"])
     if "lint" in active_tasks:
         components.update(("rustfmt", "clippy"))
-    if context.request.get("build", {}).get("build_std"):
+    if build_std:
         if "nightly" not in concrete and not requested.get("custom", False):
             raise BuildError("build_std requires an explicitly selected nightly/custom toolchain")
         components.add("rust-src")
+        context.versions["build_std"] = build_std
     if components:
         run(["rustup", "component", "add", "--toolchain", concrete, *sorted(components)],
             env=context.env, log=context.log)

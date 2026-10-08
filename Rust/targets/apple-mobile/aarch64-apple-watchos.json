@@ -3,7 +3,11 @@
   "family": "apple-mobile",
   "runner": "macos-15",
   "can_execute": false,
-  "rustup_target": "aarch64-apple-watchos",
+  "rustup_target": null,
   "verification_status": "not-run",
-  "sdk": "watchos"
+  "sdk": "watchos",
+  "build_std": [
+    "std",
+    "panic_abort"
+  ]
 }

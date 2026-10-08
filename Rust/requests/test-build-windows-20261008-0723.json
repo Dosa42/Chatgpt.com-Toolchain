@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "test-build-windows-20261008-0723",
+  "task": "build-windows",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true,
+    "targets": [
+      "x86_64-pc-windows-msvc",
+      "aarch64-pc-windows-msvc",
+      "i686-pc-windows-msvc",
+      "x86_64-pc-windows-gnu"
+    ]
+  }
+}

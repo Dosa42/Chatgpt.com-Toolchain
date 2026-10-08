@@ -59,8 +59,12 @@ def windows(context):
         raise BuildError("Visual Studio developer environment was not found")
     architecture = "arm64" if context.target["triple"].startswith("aarch64") else "x86" if context.target["triple"].startswith("i686") else "x64"
     # This is a fixed vendor environment initialization command; no request text is interpolated.
-    script = f'"{batch}" -no_logo -arch={architecture} -host_arch=x64 >nul && set'
-    response = run(["cmd.exe", "/d", "/s", "/c", script], env=context.env, log=context.log)
+    script = context.work / "msvc-environment.cmd"
+    script.write_text(
+        f'@echo off\ncall "{batch}" -no_logo -arch={architecture} -host_arch=x64 >nul\n'
+        'if errorlevel 1 exit /b %errorlevel%\nset\n', encoding="utf-8")
+    response = run(["cmd.exe", "/d", "/c", "call", str(script)],
+                   env=context.env, log=context.log)
     for line in response.stdout.splitlines():
         if "=" in line and not line.startswith("="):
             name, value = line.split("=", 1)
