@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "test-build-embedded-20261008-0715",
+  "task": "build-embedded",
+  "source": {
+    "path": "Rust/verification/projects/no-std"
+  },
+  "build": {
+    "lib": true,
+    "targets": [
+      "thumbv6m-none-eabi",
+      "thumbv7m-none-eabi",
+      "thumbv7em-none-eabi",
+      "thumbv7em-none-eabihf",
+      "thumbv8m.main-none-eabihf",
+      "riscv32imac-unknown-none-elf",
+      "riscv64imac-unknown-none-elf",
+      "aarch64-unknown-none",
+      "x86_64-unknown-none"
+    ]
+  }
+}

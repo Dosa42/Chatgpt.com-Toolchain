@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "test-build-uefi-20261008-0715",
+  "task": "build-uefi",
+  "source": {
+    "path": "Rust/verification/projects/uefi"
+  },
+  "build": {
+    "targets": [
+      "x86_64-unknown-uefi",
+      "aarch64-unknown-uefi",
+      "i686-unknown-uefi"
+    ]
+  }
+}

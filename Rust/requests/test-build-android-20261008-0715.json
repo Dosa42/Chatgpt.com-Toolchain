@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "test-build-android-20261008-0715",
+  "task": "build-android",
+  "source": {
+    "path": "Rust/verification/projects/ffi"
+  },
+  "build": {
+    "lib": true,
+    "targets": [
+      "aarch64-linux-android",
+      "armv7-linux-androideabi",
+      "x86_64-linux-android",
+      "i686-linux-android"
+    ]
+  },
+  "platform": {
+    "android_api": 23
+  }
+}

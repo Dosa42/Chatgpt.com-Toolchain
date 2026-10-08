@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "test-build-wasm-web-20261008-0715",
+  "task": "build-wasm-web",
+  "source": {
+    "path": "Rust/verification/projects/wasm"
+  },
+  "build": {
+    "lib": true,
+    "targets": [
+      "wasm32-unknown-unknown"
+    ]
+  }
+}

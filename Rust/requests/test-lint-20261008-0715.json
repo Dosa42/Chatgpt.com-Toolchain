@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "test-lint-20261008-0715",
+  "task": "lint",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true
+  }
+}

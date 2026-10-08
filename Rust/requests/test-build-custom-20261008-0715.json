@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "task": "build-custom",
+  "source": {
+    "path": "Rust/verification/projects/no-std"
+  },
+  "toolchain": {
+    "channel": "nightly-2025-09-18"
+  },
+  "build": {
+    "lib": true,
+    "build_std": [
+      "core"
+    ]
+  },
+  "platform": {
+    "custom_target": "custom-x86_64.json",
+    "setup_commands": [
+      [
+        "rustup",
+        "toolchain",
+        "install",
+        "nightly-2025-09-18",
+        "--profile",
+        "minimal"
+      ],
+      [
+        "python",
+        "-c",
+        "import pathlib,subprocess; pathlib.Path('custom-x86_64.json').write_text(subprocess.check_output(['rustc','+nightly-2025-09-18','-Z','unstable-options','--print','target-spec-json','--target','x86_64-unknown-none'],text=True),encoding='utf-8')"
+      ]
+    ]
+  },
+  "id": "test-build-custom-20261008-0715"
+}

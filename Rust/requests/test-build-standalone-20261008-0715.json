@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "test-build-standalone-20261008-0715",
+  "task": "build-standalone",
+  "source": {
+    "path": "Rust/verification/projects/standalone"
+  },
+  "standalone": {
+    "source": "main.rs",
+    "edition": "2021",
+    "crate_type": "bin"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "test-docs-20261008-0715",
+  "task": "docs",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true
+  }
+}
