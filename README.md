@@ -1,133 +1,159 @@
-# Chatgpt.com-Toolchain
-
-A central repository of ready-to-use toolchains and request-driven build workflows for ChatGPT agents, with all compilation performed on GitHub Actions runners.
-
-This repository provides a fallback build environment when a ChatGPT workspace or sandbox cannot perform the required build because the necessary toolchain, dependencies, or execution capabilities are unavailable. A user can also explicitly request that a build be performed here.
-
-## Project purpose
-
-The goal is to let a user request a real software build from the ChatGPT web platform, using the GitHub plugin to work with this repository.
-
-The agent identifies the build requirements, finds or creates the appropriate workflow, configures it for the requested source code, starts the workflow, and brings the results back to the conversation.
-
-Compilers, build tools, dependencies, and build configurations should be organized into reusable toolchains so that agents can use this infrastructure consistently across requests.
-
-“Ready to use” describes the intended finished toolchains. It does not mean that they are already implemented.
-
-## Execution boundary
-
-**All compilation provided by this repository runs exclusively on GitHub Actions runners.**
-
-The ChatGPT agent coordinates the request through the GitHub plugin. Its workspace or sandbox is not the compilation environment for this repository.
-
-The fallback is invoked in response to a request. It is not an automatic background mechanism that detects sandbox limitations and starts builds independently.
-
-## Initial language scope
-
-The initial scope includes:
-
-- **Rust**
-- **Go**
-- **C**
-- **C++**
-
-Additional languages and toolchains may be added later. Supported platforms, architectures, compiler versions, and build targets will be documented as they are defined and implemented.
-
-## Dynamic source delivery
-
-Source delivery is selected according to the current build request. Supported delivery paths are part of the intended design:
-
-- Source code prepared in the ChatGPT environment and pushed to this repository.
-- Source code obtained from another GitHub repository.
-- A specific commit or ref identifying the source to build.
-
-These are alternative delivery paths, not a requirement to use all of them for every build. The agent selects the appropriate path and records which source was used.
-
-Build values, compiler requirements, dependencies, and targets are determined from the actual source, the requested outcome, and the selected workflow. They should be configurable where needed rather than requiring one fixed set of choices for every project.
-
-## Request-driven build flow
-
-For example, a user asks the agent to build specified Rust source code using this repository.
-
-The intended flow is:
-
-1. **Understand the request.** Identify the source code and its build requirements.
-2. **Find the workflow.** Inspect this repository and select an existing workflow suitable for the requested build.
-3. **Create one if needed.** If no suitable workflow exists, create the required workflow in this repository.
-4. **Configure the build.** Set the values needed for the current source code and target, updating the workflow configuration where required.
-5. **Start the workflow.** Invoke the GitHub Actions **Run workflow** operation for that request.
-6. **Inspect the result.** Read the run status and build logs.
-7. **Return the outcome.** Retrieve the resulting artifacts after a successful build and present the results in the ChatGPT conversation. If the build fails, report the failure using the actual run output.
-
-The requested trigger model is manual dispatch: builds start when requested, rather than automatically on pushes, pull requests, or a schedule.
-
-The implementation must support this flow and dynamic source delivery. Concrete input schemas, dispatch integration, and artifact retrieval will be designed as part of the infrastructure.
-
-## Repository organization
-
-The repository root is organized by language or toolchain, starting with `Rust/`, `Go/`, `C/`, and `C++/`.
-
-Each language directory contains task-specific subdirectories. Each task directory groups its instructions, scripts, and supporting configuration so an agent can understand and use that build capability in one place.
-
-| Location | Purpose |
-| --- | --- |
-| `README.md` | Project purpose, build flow, and repository navigation. |
-| `Rust/<task>/` | Instructions, scripts, and configuration for a Rust build task. |
-| `Go/<task>/` | Instructions, scripts, and configuration for a Go build task. |
-| `C/<task>/` | Instructions, scripts, and configuration for a C build task. |
-| `C++/<task>/` | Instructions, scripts, and configuration for a C++ build task. |
-| `.github/workflows/` | Executable GitHub Actions workflow entry points for those tasks. |
-
-Rust task directories are implemented under `Rust/tasks/<task>/`; their GitHub workflow entry points are under `.github/workflows/`. Other languages will follow the same language-based organization when implemented.
-
-### GitHub Actions workflow placement
-
-GitHub requires executable workflow YAML files to reside in `.github/workflows/`. A workflow stored only in a language's task directory cannot serve as a GitHub Actions entry point.
-
-The implementation therefore keeps the workflow entry point in GitHub's required location and the corresponding instructions, scripts, and supporting configuration in the language's task directory. The entry point invokes the corresponding scripts or actions from that directory.
-
-Each task's instructions must identify its workflow entry point, and each entry point must clearly identify the task it runs. Maintain one executable workflow definition for each entry point rather than independent copies in both locations.
-
-Reference: [GitHub Actions workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax).
-
-## Workflow organization and drift prevention
-
-Agents should be able to find the appropriate toolchain without rebuilding the infrastructure from scratch for every request.
-
-**Consistent organization and prevention of configuration drift are core project requirements.**
-
-As the repository grows:
-
-- Existing suitable workflows should be reused.
-- New workflows should be added when the requested build requires capabilities that are not already available.
-- Toolchain definitions, workflow configuration, and documentation should remain aligned.
-- Changes for individual builds should not cause workflows to accumulate conflicting or unexplained configurations.
-- Each workflow should clearly document its purpose, requirements, configurable values, and outputs.
-
-The language-based root structure and task-specific organization are established. Concrete build tasks and their implementation details will be added within this structure.
-
-## Current status
-
-The Rust infrastructure has been written and connected. See [Rust/README.md](Rust/README.md) and [Rust/catalog.json](Rust/catalog.json) for all tasks and workflows. No GitHub Actions build has been started or verified during this implementation stage.
-
-The confirmed direction is:
-
-- GitHub Actions runners are the exclusive compilation environment.
-- ChatGPT agents use the GitHub plugin to coordinate requested builds.
-- Agents find or create the appropriate workflow and configure it for the source being built.
-- Builds start on request.
-- Results are brought back to ChatGPT.
-- Source delivery is dynamic: source can be pushed from ChatGPT or obtained from another repository and commit/ref.
-- The repository is organized into language directories and task-specific subdirectories, with workflow entry points in GitHub's required location.
-- Infrastructure organization and drift prevention are central requirements.
-
-Rust task implementations, shared build code, target definitions, machine-readable schemas and dispatch-only workflows are now present. Their execution and platform behavior remain unverified until the later testing phase. Go, C and C++ infrastructure has not been implemented yet.
-
-## Guidance for agents
-
-Read this README before extending the repository.
-
-Keep implementation aligned with the confirmed build flow, directory organization, and execution boundary. Derive technical build settings from the source and requested result. Reuse suitable infrastructure, document new capabilities, and distinguish planned features from working features.
-
-Report build success only when an actual GitHub Actions run supports that result. Update this README as implementation decisions and verified capabilities become available.
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Dosa42/Chatgpt.com-Toolchain/main/README.md",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "repository",
+    "purpose",
+    "execution",
+    "languages",
+    "rust_entry",
+    "operations",
+    "state"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "repository": {
+      "type": "string",
+      "const": "Dosa42/Chatgpt.com-Toolchain"
+    },
+    "purpose": {
+      "type": "array",
+      "const": [
+        "source_build",
+        "source_compile",
+        "sandbox_capability_fallback"
+      ]
+    },
+    "execution": {
+      "type": "object",
+      "const": {
+        "compilation_environment": "github_actions_runner",
+        "coordination_environment": "chatgpt",
+        "github_interface": "github_plugin",
+        "trigger": "workflow_dispatch",
+        "automatic_push_trigger": false,
+        "automatic_pull_request_trigger": false,
+        "automatic_schedule_trigger": false,
+        "workspace_compilation": false
+      }
+    },
+    "languages": {
+      "type": "object",
+      "const": {
+        "Rust": {
+          "root": "Rust/",
+          "descriptor": "Rust/README.md",
+          "catalog": "Rust/catalog.json",
+          "implementation": "written",
+          "runtime_verification": "not_run"
+        },
+        "Go": {
+          "root": "Go/",
+          "implementation": "not_implemented"
+        },
+        "C": {
+          "root": "C/",
+          "implementation": "not_implemented"
+        },
+        "C++": {
+          "root": "C++/",
+          "implementation": "not_implemented"
+        }
+      }
+    },
+    "rust_entry": {
+      "type": "object",
+      "const": {
+        "descriptor": "Rust/README.md",
+        "task_catalog": "Rust/catalog.json",
+        "target_catalog": "Rust/targets/catalog.json",
+        "request_schema": "Rust/schemas/request.schema.json",
+        "task_schema": "Rust/schemas/task.schema.json",
+        "target_schema": "Rust/schemas/target.schema.json",
+        "result_schema": "Rust/schemas/result.schema.json",
+        "catalog_schema": "Rust/schemas/catalog.schema.json",
+        "workflow_directory": ".github/workflows/",
+        "path_base": "repository_root"
+      }
+    },
+    "operations": {
+      "type": "object",
+      "const": {
+        "rust_discover": {
+          "read": [
+            "Rust/README.md",
+            "Rust/catalog.json",
+            "Rust/targets/catalog.json"
+          ],
+          "task_lookup": {
+            "index": "/tasks",
+            "key": "id",
+            "fields": [
+              "definition",
+              "workflow"
+            ]
+          }
+        },
+        "rust_use": {
+          "descriptor_path": "Rust/README.md",
+          "operation_keys": [
+            "discover",
+            "request_create",
+            "dispatch",
+            "run_find",
+            "run_watch",
+            "artifact_download"
+          ]
+        },
+        "rust_modify": {
+          "descriptor_path": "Rust/README.md",
+          "operation_keys": [
+            "task_modify",
+            "task_add",
+            "target_modify",
+            "target_add",
+            "shared_modify",
+            "toolchain_modify",
+            "workflow_regenerate",
+            "static_validate"
+          ]
+        },
+        "readme_modify": {
+          "format": "json",
+          "schema_dialect": "https://json-schema.org/draft/2020-12/schema",
+          "markdown": false,
+          "code_fences": false,
+          "prose_fields": false
+        }
+      }
+    },
+    "state": {
+      "type": "object",
+      "const": {
+        "implementation_commit": "6d6113d62f6b98064f701ef8aa8ae403463506dd",
+        "implementation": "written",
+        "verification": "static_only",
+        "runtime_verification": "not_run",
+        "current_phase": "configuration_review",
+        "current_phase_dispatch": false
+      }
+    }
+  },
+  "$defs": {
+    "rust_contract": {
+      "$ref": "Rust/README.md"
+    },
+    "build_request": {
+      "$ref": "Rust/schemas/request.schema.json"
+    },
+    "build_result": {
+      "$ref": "Rust/schemas/result.schema.json"
+    }
+  }
+}
