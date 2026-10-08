@@ -63,6 +63,8 @@ def run(argv, *, cwd=None, env=None, log=None, check=True, timeout=None):
             out.write(process.stderr)
     if process.stderr:
         print(process.stderr, end="", flush=True)
+    if process.returncode and process.stdout:
+        print(process.stdout, end="", flush=True)
     if check and process.returncode:
         raise BuildError(f"Command failed ({process.returncode}): {argv[0]}; see build logs")
     return process

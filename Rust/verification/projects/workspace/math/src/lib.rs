@@ -10,7 +10,9 @@ pub fn gcd(mut a: u64, mut b: u64) -> u64 {
 
 /// Sum signed values, returning None if the result overflows.
 pub fn checked_sum(values: &[i64]) -> Option<i64> {
-    values.iter().try_fold(0_i64, |sum, &value| sum.checked_add(value))
+    values
+        .iter()
+        .try_fold(0_i64, |sum, &value| sum.checked_add(value))
 }
 
 /// Calculate a dot product with length and overflow checking.
@@ -18,9 +20,9 @@ pub fn checked_dot(a: &[i64], b: &[i64]) -> Option<i64> {
     if a.len() != b.len() {
         return None;
     }
-    a.iter().zip(b).try_fold(0_i64, |sum, (&x, &y)| {
-        sum.checked_add(x.checked_mul(y)?)
-    })
+    a.iter()
+        .zip(b)
+        .try_fold(0_i64, |sum, (&x, &y)| sum.checked_add(x.checked_mul(y)?))
 }
 
 #[cfg(test)]
