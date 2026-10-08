@@ -12,5 +12,5 @@
     "aarch64-apple-ios"
   ],
   "default_profile": "release",
-  "verification_status": "not-run"
+  "verification_status": "passed"
 }

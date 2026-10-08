@@ -2,7 +2,7 @@
 
 Task ID: `build-apple-mobile`. Workflow: [`.github/workflows/rust-build-apple-mobile.yml`](../../../.github/workflows/rust-build-apple-mobile.yml).
 
-Status: implementation written; no GitHub Actions build has been executed or verified.
+Status: GitHub Actions verification passed for the recorded fixtures. [Verified run](https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37743001090); [coverage and evidence](../../verification/results/2026-10-08.json).
 
 ## Usage
 
@@ -33,4 +33,6 @@ This task builds Rust libraries. It does not sign or publish Apple applications.
 | `aarch64-apple-visionos` | `macos-15` | Build only; explicit runtime required for execution |
 | `aarch64-apple-visionos-sim` | `macos-15` | Build only; explicit runtime required for execution |
 
-Target configurations are written, not build-verified. See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+Target build coverage and task execution coverage are recorded separately in [verification evidence](../../verification/results/2026-10-08.json). See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+
+The tvOS, watchOS and visionOS target definitions build their standard libraries from source using pinned nightly and rust-src. Source and request toolchain overrides retain precedence.

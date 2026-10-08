@@ -4,7 +4,7 @@
   "runner": "ubuntu-24.04",
   "can_execute": false,
   "rustup_target": "armv7-unknown-linux-gnueabihf",
-  "verification_status": "not-run",
+  "verification_status": "passed",
   "linker": "arm-linux-gnueabihf-gcc",
   "apt_packages": [
     "gcc-arm-linux-gnueabihf",

@@ -2,7 +2,7 @@
 
 Task ID: `build-wasi`. Workflow: [`.github/workflows/rust-build-wasi.yml`](../../../.github/workflows/rust-build-wasi.yml).
 
-Status: implementation written; no GitHub Actions build has been executed or verified.
+Status: GitHub Actions verification passed for the recorded fixtures. [Verified run](https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742171313); [coverage and evidence](../../verification/results/2026-10-08.json).
 
 ## Usage
 
@@ -26,4 +26,4 @@ wasm32-wasip1 emits a core module; wasm32-wasip2 emits a component. Native C dep
 | `wasm32-wasip1` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 | `wasm32-wasip2` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 
-Target configurations are written, not build-verified. See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+Target build coverage and task execution coverage are recorded separately in [verification evidence](../../verification/results/2026-10-08.json). See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).

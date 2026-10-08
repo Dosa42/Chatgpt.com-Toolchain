@@ -1,0 +1,2022 @@
+{
+  "schema_version": 1,
+  "repository": "Dosa42/Chatgpt.com-Toolchain",
+  "recorded_at": "2026-10-08T07:28:13.250159+00:00",
+  "status": "passed",
+  "compilation_environment": "github_actions_runner",
+  "scope": {
+    "task_count": 18,
+    "target_count": 40,
+    "verification_case_count": 9,
+    "rust_test_count": 4,
+    "source_scope": "repository_verification_fixtures",
+    "foreign_target_scope": "compilation_and_artifacts",
+    "custom_target_scope": "generated_x86_64_none_target_spec_with_nightly_core",
+    "physical_device_execution": false,
+    "external_repository_fixture": false,
+    "wasm_bindgen_fixture": false
+  },
+  "artifact_validation": {
+    "archive_count": 62,
+    "archive_sha256_verified": true,
+    "result_schema_validated": true,
+    "product_checksum_count": 360,
+    "product_sizes_verified": true,
+    "run_commit_and_job_identity_verified": true
+  },
+  "latest_task_runs": {
+    "build-linux": {
+      "run_id": 37742041638,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742041638",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 5
+    },
+    "build-windows": {
+      "run_id": 37742971036,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742971036",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "target_count": 4
+    },
+    "build-macos": {
+      "run_id": 37742557654,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742557654",
+      "infrastructure_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "target_count": 2
+    },
+    "build-android": {
+      "run_id": 37742103849,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742103849",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 4
+    },
+    "build-apple-mobile": {
+      "run_id": 37743001090,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37743001090",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "target_count": 9
+    },
+    "build-wasm-web": {
+      "run_id": 37742147982,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742147982",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "build-wasi": {
+      "run_id": 37742171313,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742171313",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 2
+    },
+    "build-embedded": {
+      "run_id": 37742191999,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742191999",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 9
+    },
+    "build-uefi": {
+      "run_id": 37742213655,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742213655",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 3
+    },
+    "build-custom": {
+      "run_id": 37742247684,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742247684",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "build-standalone": {
+      "run_id": 37742263962,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742263962",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "check": {
+      "run_id": 37742282417,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742282417",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "test": {
+      "run_id": 37742318162,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742318162",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "lint": {
+      "run_id": 37742355767,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742355767",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "docs": {
+      "run_id": 37742406899,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742406899",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "package": {
+      "run_id": 37742427498,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742427498",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "benchmark": {
+      "run_id": 37742445662,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742445662",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "target_count": 1
+    },
+    "verify-infrastructure": {
+      "run_id": 37743025443,
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37743025443",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "target_count": 1
+    }
+  },
+  "target_builds": [
+    {
+      "task": "build-standalone",
+      "target": "x86_64-unknown-linux-gnu",
+      "status": "success",
+      "run_id": 37742263962,
+      "job_id": 113195598070,
+      "artifact_id": 11533713922,
+      "artifact_sha256": "fd23cb8eeb7235c8d7dc5a3123151650dd8653da41bea192919ca042a60eb36c",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-linux",
+      "target": "aarch64-unknown-linux-gnu",
+      "status": "success",
+      "run_id": 37742041638,
+      "job_id": 113194847479,
+      "artifact_id": 11533184777,
+      "artifact_sha256": "810980b3d9e26b7995285f3725432ab9e348a55324f030dfcf8f58c78beb36db",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-linux",
+      "target": "armv7-unknown-linux-gnueabihf",
+      "status": "success",
+      "run_id": 37742041638,
+      "job_id": 113194847527,
+      "artifact_id": 11533818314,
+      "artifact_sha256": "d0217cd630daf798cbf5334a4dd4347f20d8de9d2f21e89d960d6685cff35b9b",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-linux",
+      "target": "i686-unknown-linux-gnu",
+      "status": "success",
+      "run_id": 37742041638,
+      "job_id": 113194847513,
+      "artifact_id": 11533869582,
+      "artifact_sha256": "aa3c31269755c3156daace2981acfe32c37c5065cafb230e9bb0809fbac5d9d9",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-linux",
+      "target": "x86_64-unknown-linux-musl",
+      "status": "success",
+      "run_id": 37742041638,
+      "job_id": 113194847577,
+      "artifact_id": 11534480666,
+      "artifact_sha256": "690aa5034c8c9d4a716a9a80b87581f4682702e12563a46e7fcfe847c2d32be5",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-windows",
+      "target": "x86_64-pc-windows-msvc",
+      "status": "success",
+      "run_id": 37742971036,
+      "job_id": 113197855840,
+      "artifact_id": 11534696243,
+      "artifact_sha256": "c22c2220fdf64a8560b83e45b77630403907218de53522298539f115fc3f5792",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "AMD64",
+        "image_os": "win25-vs2026",
+        "image_version": "20260925.250.1",
+        "os": "Windows-2025Server-10.0.26100-SP0",
+        "python": "3.12.10"
+      },
+      "product_count": 4,
+      "product_checksums_verified": 4
+    },
+    {
+      "task": "build-windows",
+      "target": "aarch64-pc-windows-msvc",
+      "status": "success",
+      "run_id": 37742971036,
+      "job_id": 113197856063,
+      "artifact_id": 11533819685,
+      "artifact_sha256": "b4090f04845a29172c10778b104f417f57212e682925542cb85ffa58e0f34670",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "AMD64",
+        "image_os": "win25-vs2026",
+        "image_version": "20260925.250.1",
+        "os": "Windows-2025Server-10.0.26100-SP0",
+        "python": "3.12.10"
+      },
+      "product_count": 4,
+      "product_checksums_verified": 4
+    },
+    {
+      "task": "build-windows",
+      "target": "i686-pc-windows-msvc",
+      "status": "success",
+      "run_id": 37742971036,
+      "job_id": 113197855831,
+      "artifact_id": 11534367837,
+      "artifact_sha256": "c04282e57176aa329fdbf3b38f65b5039f1e3ec705e217230857be2cb5007a16",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "AMD64",
+        "image_os": "win25-vs2026",
+        "image_version": "20260925.250.1",
+        "os": "Windows-2025Server-10.0.26100-SP0",
+        "python": "3.12.10"
+      },
+      "product_count": 4,
+      "product_checksums_verified": 4
+    },
+    {
+      "task": "build-windows",
+      "target": "x86_64-pc-windows-gnu",
+      "status": "success",
+      "run_id": 37742971036,
+      "job_id": 113197855914,
+      "artifact_id": 11535250263,
+      "artifact_sha256": "611df24e49bd94b6daecefa3b701b5d92bf281d57f3812e70c064498035872a9",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.10"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-macos",
+      "target": "aarch64-apple-darwin",
+      "status": "success",
+      "run_id": 37742557654,
+      "job_id": 113196535648,
+      "artifact_id": 11534436794,
+      "artifact_sha256": "408ada797d62135cf420f636e4b8182cbc547b920fa45d34f38dab27d933011b",
+      "infrastructure_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "request_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "source_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-macos",
+      "target": "x86_64-apple-darwin",
+      "status": "success",
+      "run_id": 37742557654,
+      "job_id": 113196535660,
+      "artifact_id": 11533654442,
+      "artifact_sha256": "9c4614453048d97d940f7744490e33f298d1809182fe9a60e36321a60e7f2862",
+      "infrastructure_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "request_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "source_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-android",
+      "target": "aarch64-linux-android",
+      "status": "success",
+      "run_id": 37742103849,
+      "job_id": 113195045823,
+      "artifact_id": 11534265944,
+      "artifact_sha256": "0cfb61d4a4b8cb2d02f3f5765095d9e25d25709b40d3b9493ab8addb072e82fe",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-android",
+      "target": "armv7-linux-androideabi",
+      "status": "success",
+      "run_id": 37742103849,
+      "job_id": 113195045848,
+      "artifact_id": 11534261614,
+      "artifact_sha256": "f336034feefffb252745fe27bccedb636289cb669e92dca6a285130d84ea7192",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-android",
+      "target": "x86_64-linux-android",
+      "status": "success",
+      "run_id": 37742103849,
+      "job_id": 113195045751,
+      "artifact_id": 11534650536,
+      "artifact_sha256": "a0ab8d2163ce69a4091932945e604c60bd1fde0ac07adcfe5204cef7ac8f6aef",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-android",
+      "target": "i686-linux-android",
+      "status": "success",
+      "run_id": 37742103849,
+      "job_id": 113195045842,
+      "artifact_id": 11534206760,
+      "artifact_sha256": "aad30d3b9b668b2fe22e11aaaddfa25ae25b417f06d5f6e011d5419d03530248",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "aarch64-apple-ios",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197928091,
+      "artifact_id": 11534886012,
+      "artifact_sha256": "c8318b664d66e49886d30b607f320aa9289b86b4a8232d9e128afb7666862168",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "aarch64-apple-ios-sim",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197927890,
+      "artifact_id": 11534905730,
+      "artifact_sha256": "95b92d6f8136d4149b49618e9d5183c78c1ff673c04dad77f2b76643d7903f5e",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "x86_64-apple-ios",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197927978,
+      "artifact_id": 11535011386,
+      "artifact_sha256": "611c371495461d7dab6d65a0ea203fb5b059c08b5c5c04016aa46a69aa456b90",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "aarch64-apple-tvos",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197927888,
+      "artifact_id": 11535270229,
+      "artifact_sha256": "e990997c9de647fc9cdc8313775c355a120b9af3244e92cd82ac2cd234bfe085",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "nightly-2025-09-18",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "aarch64-apple-tvos-sim",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197927946,
+      "artifact_id": 11534089963,
+      "artifact_sha256": "4cdf8d39adb75c9b604339b073f7982e296a3148b288f2c42cfbfb56549d9214",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "nightly-2025-09-18",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "aarch64-apple-watchos",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197927854,
+      "artifact_id": 11534198735,
+      "artifact_sha256": "d94634b84a3171b3417d4c6f03cff7eae6e6243b09e191b0f31db8235063b3c2",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "nightly-2025-09-18",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "aarch64-apple-watchos-sim",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197927969,
+      "artifact_id": 11534198906,
+      "artifact_sha256": "b99999e6fe72a8c09fc23a1bf7ac4947ea10e09e7c414108ef65d9912bfc1793",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "nightly-2025-09-18",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "aarch64-apple-visionos",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197927929,
+      "artifact_id": 11534387921,
+      "artifact_sha256": "c5a5aa0140bf675bdea46c5d0dd357733e3954b906418098ddb7a61bdb791143",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "nightly-2025-09-18",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-apple-mobile",
+      "target": "aarch64-apple-visionos-sim",
+      "status": "success",
+      "run_id": 37743001090,
+      "job_id": 113197927921,
+      "artifact_id": 11534343220,
+      "artifact_sha256": "a1045ef300255d6f548a3fac2793c86ec5be03ce9b36ccf9fffea55f5077e407",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "toolchain": "nightly-2025-09-18",
+      "runner": {
+        "architecture": "arm64",
+        "image_os": "macos15",
+        "image_version": "20260907.0337.1",
+        "os": "macOS-15.7.9-arm64-arm-64bit",
+        "python": "3.12.10"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-wasm-web",
+      "target": "wasm32-unknown-unknown",
+      "status": "success",
+      "run_id": 37742147982,
+      "job_id": 113195170253,
+      "artifact_id": 11534450815,
+      "artifact_sha256": "7b04a28c785f49b8b9f8c7257864550ae4920000268ce95940679a29c6b78d6e",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-wasi",
+      "target": "wasm32-wasip1",
+      "status": "success",
+      "run_id": 37742171313,
+      "job_id": 113195269097,
+      "artifact_id": 11534371279,
+      "artifact_sha256": "ca3cb96ae2db28abafad36263e21594bad47298bdd0d775b5106fa58b1101e59",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-wasi",
+      "target": "wasm32-wasip2",
+      "status": "success",
+      "run_id": 37742171313,
+      "job_id": 113195269178,
+      "artifact_id": 11534585669,
+      "artifact_sha256": "c8650973c270243503ed4058fede2a4097ba0a01ba331d618674259aa2f4c5e8",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-embedded",
+      "target": "thumbv6m-none-eabi",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329181,
+      "artifact_id": 11534605223,
+      "artifact_sha256": "9394c3d27264e60eeb13d8be6c43789c869633976bfb1bc2809eee79526bd7cb",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-embedded",
+      "target": "thumbv7m-none-eabi",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329160,
+      "artifact_id": 11533929594,
+      "artifact_sha256": "ca589d87a78cc7d4cde0ff38b044010b5ef2a6242c6841b0c522ab9d5cf4d466",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-embedded",
+      "target": "thumbv7em-none-eabi",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329402,
+      "artifact_id": 11534321464,
+      "artifact_sha256": "8b015726983d31e59cb3b77fe8fbd80fcb18c86f970d1064629e610cc9daa6a8",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-embedded",
+      "target": "thumbv7em-none-eabihf",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329221,
+      "artifact_id": 11534690097,
+      "artifact_sha256": "fa734f2e58f526ab07507c8c65b5e626414e58fa28136e51f79e80900ed060db",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-embedded",
+      "target": "thumbv8m.main-none-eabihf",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329280,
+      "artifact_id": 11534745332,
+      "artifact_sha256": "0b28657035e323d537b974c316d7df1ae637ab877192cf5ce2d2348a9117b504",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-embedded",
+      "target": "riscv32imac-unknown-none-elf",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329275,
+      "artifact_id": 11534033826,
+      "artifact_sha256": "02844d5d07308936ed71119a8f7e7ae1858a9852f5a8c8aadb5e74928f943db6",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-embedded",
+      "target": "riscv64imac-unknown-none-elf",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329200,
+      "artifact_id": 11534760293,
+      "artifact_sha256": "3a59e9ec43ae6ed4542f0729b0ae224c3473a0e3f0adc4fa703e55ce9ef31cdc",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-embedded",
+      "target": "aarch64-unknown-none",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329188,
+      "artifact_id": 11534211173,
+      "artifact_sha256": "0ba5981066e08399afd4107a3380db89e4703ee8766e3c0657d8981f6ab91352",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-embedded",
+      "target": "x86_64-unknown-none",
+      "status": "success",
+      "run_id": 37742191999,
+      "job_id": 113195329258,
+      "artifact_id": 11534525291,
+      "artifact_sha256": "3d3fee3de088f6bb781f65290ce7437fe9c83f451b47c93ff798f1c9fefc0962",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    },
+    {
+      "task": "build-uefi",
+      "target": "x86_64-unknown-uefi",
+      "status": "success",
+      "run_id": 37742213655,
+      "job_id": 113195404094,
+      "artifact_id": 11533339634,
+      "artifact_sha256": "a2246edd35592416c9bf475cb557a6991f6fcb1c350ed552b5fbca444be6ce40",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-uefi",
+      "target": "aarch64-unknown-uefi",
+      "status": "success",
+      "run_id": 37742213655,
+      "job_id": 113195404132,
+      "artifact_id": 11534585747,
+      "artifact_sha256": "22de205091a0dc049f40bb6d9d9d5e322e6b5d6dd1ecabc6b0b2811ea81a8a1c",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-uefi",
+      "target": "i686-unknown-uefi",
+      "status": "success",
+      "run_id": 37742213655,
+      "job_id": 113195404286,
+      "artifact_id": 11534078486,
+      "artifact_sha256": "b2aa89b79c3119c1345e0cd8cdca3bb077a92e56de8232101708b52c7f78073a",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "1.90.0",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20261004.327.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 3,
+      "product_checksums_verified": 3
+    },
+    {
+      "task": "build-custom",
+      "target": "custom",
+      "status": "success",
+      "run_id": 37742247684,
+      "job_id": 113195502092,
+      "artifact_id": 11533239927,
+      "artifact_sha256": "adcc0dabcc3599a7a9c51466ebaf2e618c7d955a4d21c45e66f75b83c03d2f12",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "request_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "source_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "toolchain": "nightly-2025-09-18",
+      "runner": {
+        "architecture": "x86_64",
+        "image_os": "ubuntu24",
+        "image_version": "20260927.320.1",
+        "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.12"
+      },
+      "product_count": 2,
+      "product_checksums_verified": 2
+    }
+  ],
+  "verification_suite": {
+    "task": "verify-infrastructure",
+    "target": "x86_64-unknown-linux-gnu",
+    "status": "success",
+    "run_id": 37743025443,
+    "job_id": 113198031878,
+    "artifact_id": 11534222223,
+    "artifact_sha256": "3c2305a360adf5dfaafbd05e2a7a522ac5a709d77450a11d4ffe5b005d3c804c",
+    "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+    "request_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+    "source_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+    "toolchain": "1.90.0",
+    "runner": {
+      "architecture": "x86_64",
+      "image_os": "ubuntu24",
+      "image_version": "20260927.320.1",
+      "os": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "python": "3.12.10"
+    },
+    "product_count": 123,
+    "product_checksums_verified": 123,
+    "cases": [
+      {
+        "id": "workspace-build",
+        "status": "success"
+      },
+      {
+        "id": "workspace-check",
+        "status": "success"
+      },
+      {
+        "id": "workspace-tests",
+        "status": "success"
+      },
+      {
+        "id": "workspace-lint",
+        "status": "success"
+      },
+      {
+        "id": "workspace-docs",
+        "status": "success"
+      },
+      {
+        "id": "crate-package",
+        "status": "success"
+      },
+      {
+        "id": "workspace-benchmark",
+        "status": "success"
+      },
+      {
+        "id": "ffi-libraries",
+        "status": "success"
+      },
+      {
+        "id": "standalone-rustc",
+        "status": "success"
+      }
+    ],
+    "rust_test_count": 4
+  },
+  "workflow_history": [
+    {
+      "run_id": 37743025443,
+      "name": "Rust | verify-infrastructure | verify-linux-20261008-0723",
+      "workflow": ".github/workflows/rust-verify-infrastructure.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "created_at": "2026-10-08T07:22:26Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37743025443",
+      "jobs": [
+        {
+          "job_id": 113197930993,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113198031878,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37743001090,
+      "name": "Rust | build-apple-mobile | test-build-apple-mobile-20261008-0723",
+      "workflow": ".github/workflows/rust-build-apple-mobile.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "created_at": "2026-10-08T07:22:12Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37743001090",
+      "jobs": [
+        {
+          "job_id": 113197854984,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197927854,
+          "name": "execute (aarch64-apple-watchos, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197927888,
+          "name": "execute (aarch64-apple-tvos, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197927890,
+          "name": "execute (aarch64-apple-ios-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197927921,
+          "name": "execute (aarch64-apple-visionos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197927929,
+          "name": "execute (aarch64-apple-visionos, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197927946,
+          "name": "execute (aarch64-apple-tvos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197927969,
+          "name": "execute (aarch64-apple-watchos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197927978,
+          "name": "execute (x86_64-apple-ios, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197928091,
+          "name": "execute (aarch64-apple-ios, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742971036,
+      "name": "Rust | build-windows | test-build-windows-20261008-0723",
+      "workflow": ".github/workflows/rust-build-windows.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "15b99d0adfd25e6982748849ae123e32da8a134f",
+      "created_at": "2026-10-08T07:21:54Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742971036",
+      "jobs": [
+        {
+          "job_id": 113197760298,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197855831,
+          "name": "execute (i686-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197855840,
+          "name": "execute (x86_64-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197855914,
+          "name": "execute (x86_64-pc-windows-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113197856063,
+          "name": "execute (aarch64-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742580758,
+      "name": "Rust | build-apple-mobile | test-build-apple-mobile-20261008-0720",
+      "workflow": ".github/workflows/rust-build-apple-mobile.yml",
+      "status": "completed",
+      "conclusion": "failure",
+      "infrastructure_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "created_at": "2026-10-08T07:18:03Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742580758",
+      "jobs": [
+        {
+          "job_id": 113196500317,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196579892,
+          "name": "execute (aarch64-apple-ios-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196579913,
+          "name": "execute (x86_64-apple-ios, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196579967,
+          "name": "execute (aarch64-apple-visionos, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113196579974,
+          "name": "execute (aarch64-apple-ios, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196580028,
+          "name": "execute (aarch64-apple-tvos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113196580064,
+          "name": "execute (aarch64-apple-tvos, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113196580065,
+          "name": "execute (aarch64-apple-watchos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113196580075,
+          "name": "execute (aarch64-apple-watchos, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113196580117,
+          "name": "execute (aarch64-apple-visionos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run_id": 37742557654,
+      "name": "Rust | build-macos | test-build-macos-20261008-0720",
+      "workflow": ".github/workflows/rust-build-macos.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "created_at": "2026-10-08T07:17:50Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742557654",
+      "jobs": [
+        {
+          "job_id": 113196425383,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196535648,
+          "name": "execute (aarch64-apple-darwin, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196535660,
+          "name": "execute (x86_64-apple-darwin, macos-15)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742540775,
+      "name": "Rust | build-windows | test-build-windows-20261008-0720",
+      "workflow": ".github/workflows/rust-build-windows.yml",
+      "status": "completed",
+      "conclusion": "failure",
+      "infrastructure_commit": "bf954740cb71f128058b6475a62cc084cf79053b",
+      "created_at": "2026-10-08T07:17:40Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742540775",
+      "jobs": [
+        {
+          "job_id": 113196370443,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196472045,
+          "name": "execute (x86_64-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113196472071,
+          "name": "execute (aarch64-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113196472103,
+          "name": "execute (x86_64-pc-windows-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196472167,
+          "name": "execute (i686-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run_id": 37742445662,
+      "name": "Rust | benchmark | test-benchmark-20261008-0715",
+      "workflow": ".github/workflows/rust-benchmark.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:16:43Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742445662",
+      "jobs": [
+        {
+          "job_id": 113196059264,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196158111,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742427498,
+      "name": "Rust | package | test-package-20261008-0715",
+      "workflow": ".github/workflows/rust-package.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:16:32Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742427498",
+      "jobs": [
+        {
+          "job_id": 113196000291,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196088744,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742406899,
+      "name": "Rust | docs | test-docs-20261008-0715",
+      "workflow": ".github/workflows/rust-docs.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:16:20Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742406899",
+      "jobs": [
+        {
+          "job_id": 113195930480,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113196036940,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742355767,
+      "name": "Rust | lint | test-lint-20261008-0715",
+      "workflow": ".github/workflows/rust-lint.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:15:49Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742355767",
+      "jobs": [
+        {
+          "job_id": 113195765524,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195880954,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742318162,
+      "name": "Rust | test | test-test-20261008-0715",
+      "workflow": ".github/workflows/rust-test.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:15:27Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742318162",
+      "jobs": [
+        {
+          "job_id": 113195647125,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195720609,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742282417,
+      "name": "Rust | check | test-check-20261008-0715",
+      "workflow": ".github/workflows/rust-check.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:15:07Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742282417",
+      "jobs": [
+        {
+          "job_id": 113195533072,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195621794,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742263962,
+      "name": "Rust | build-standalone | test-build-standalone-20261008-0715",
+      "workflow": ".github/workflows/rust-build-standalone.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:14:56Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742263962",
+      "jobs": [
+        {
+          "job_id": 113195474482,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195598070,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742247684,
+      "name": "Rust | build-custom | test-build-custom-20261008-0715",
+      "workflow": ".github/workflows/rust-build-custom.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:14:46Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742247684",
+      "jobs": [
+        {
+          "job_id": 113195421092,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195502092,
+          "name": "execute (custom, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742213655,
+      "name": "Rust | build-uefi | test-build-uefi-20261008-0715",
+      "workflow": ".github/workflows/rust-build-uefi.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:14:25Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742213655",
+      "jobs": [
+        {
+          "job_id": 113195310645,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195404094,
+          "name": "execute (x86_64-unknown-uefi, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195404132,
+          "name": "execute (aarch64-unknown-uefi, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195404286,
+          "name": "execute (i686-unknown-uefi, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742191999,
+      "name": "Rust | build-embedded | test-build-embedded-20261008-0715",
+      "workflow": ".github/workflows/rust-build-embedded.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:14:12Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742191999",
+      "jobs": [
+        {
+          "job_id": 113195239597,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329160,
+          "name": "execute (thumbv7m-none-eabi, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329181,
+          "name": "execute (thumbv6m-none-eabi, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329188,
+          "name": "execute (aarch64-unknown-none, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329200,
+          "name": "execute (riscv64imac-unknown-none-elf, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329221,
+          "name": "execute (thumbv7em-none-eabihf, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329258,
+          "name": "execute (x86_64-unknown-none, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329275,
+          "name": "execute (riscv32imac-unknown-none-elf, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329280,
+          "name": "execute (thumbv8m.main-none-eabihf, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195329402,
+          "name": "execute (thumbv7em-none-eabi, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742171313,
+      "name": "Rust | build-wasi | test-build-wasi-20261008-0715",
+      "workflow": ".github/workflows/rust-build-wasi.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:14:00Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742171313",
+      "jobs": [
+        {
+          "job_id": 113195173212,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195269097,
+          "name": "execute (wasm32-wasip1, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195269178,
+          "name": "execute (wasm32-wasip2, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742147982,
+      "name": "Rust | build-wasm-web | test-build-wasm-web-20261008-0715",
+      "workflow": ".github/workflows/rust-build-wasm-web.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:13:46Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742147982",
+      "jobs": [
+        {
+          "job_id": 113195098166,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195170253,
+          "name": "execute (wasm32-unknown-unknown, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742122237,
+      "name": "Rust | build-apple-mobile | test-build-apple-mobile-20261008-0715",
+      "workflow": ".github/workflows/rust-build-apple-mobile.yml",
+      "status": "completed",
+      "conclusion": "failure",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:13:30Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742122237",
+      "jobs": [
+        {
+          "job_id": 113195013457,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195105393,
+          "name": "execute (aarch64-apple-ios-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113195105398,
+          "name": "execute (aarch64-apple-ios, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113195105408,
+          "name": "execute (aarch64-apple-visionos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113195105430,
+          "name": "execute (aarch64-apple-tvos, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113195105454,
+          "name": "execute (x86_64-apple-ios, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113195105467,
+          "name": "execute (aarch64-apple-visionos, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113195105474,
+          "name": "execute (aarch64-apple-tvos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113195105482,
+          "name": "execute (aarch64-apple-watchos-sim, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113195105508,
+          "name": "execute (aarch64-apple-watchos, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run_id": 37742103849,
+      "name": "Rust | build-android | test-build-android-20261008-0715",
+      "workflow": ".github/workflows/rust-build-android.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:13:18Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742103849",
+      "jobs": [
+        {
+          "job_id": 113194953263,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195045751,
+          "name": "execute (x86_64-linux-android, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195045823,
+          "name": "execute (aarch64-linux-android, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195045842,
+          "name": "execute (i686-linux-android, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113195045848,
+          "name": "execute (armv7-linux-androideabi, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37742082038,
+      "name": "Rust | build-macos | test-build-macos-20261008-0715",
+      "workflow": ".github/workflows/rust-build-macos.yml",
+      "status": "completed",
+      "conclusion": "failure",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:13:05Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742082038",
+      "jobs": [
+        {
+          "job_id": 113194883046,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194970993,
+          "name": "execute (x86_64-apple-darwin, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113194971169,
+          "name": "execute (aarch64-apple-darwin, macos-15)",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run_id": 37742057897,
+      "name": "Rust | build-windows | test-build-windows-20261008-0715",
+      "workflow": ".github/workflows/rust-build-windows.yml",
+      "status": "completed",
+      "conclusion": "failure",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:12:51Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742057897",
+      "jobs": [
+        {
+          "job_id": 113194804727,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194896214,
+          "name": "execute (aarch64-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113194896249,
+          "name": "execute (x86_64-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "job_id": 113194896264,
+          "name": "execute (x86_64-pc-windows-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194896286,
+          "name": "execute (i686-pc-windows-msvc, windows-2025)",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "run_id": 37742041638,
+      "name": "Rust | build-linux | test-build-linux-20261008-0715",
+      "workflow": ".github/workflows/rust-build-linux.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "bd27761672dbc187bbd7b6293645bbc73ce5159f",
+      "created_at": "2026-10-08T07:12:41Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742041638",
+      "jobs": [
+        {
+          "job_id": 113194753241,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194847479,
+          "name": "execute (aarch64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194847513,
+          "name": "execute (i686-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194847527,
+          "name": "execute (armv7-unknown-linux-gnueabihf, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194847577,
+          "name": "execute (x86_64-unknown-linux-musl, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194847588,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37741817577,
+      "name": "Rust | verify-infrastructure | verify-linux-20261008-0711",
+      "workflow": ".github/workflows/rust-verify-infrastructure.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "infrastructure_commit": "388eaf8b4d52671eaa2843e8be0e6c6d6cbf6bfb",
+      "created_at": "2026-10-08T07:10:24Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37741817577",
+      "jobs": [
+        {
+          "job_id": 113194026901,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113194107677,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "run_id": 37741400974,
+      "name": "Rust | verify-infrastructure | verify-linux-20261008-0245",
+      "workflow": ".github/workflows/rust-verify-infrastructure.yml",
+      "status": "completed",
+      "conclusion": "failure",
+      "infrastructure_commit": "a28fa547928a24a4fb5b45c74dfcc0dec6b70c98",
+      "created_at": "2026-10-08T07:06:16Z",
+      "run_url": "https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37741400974",
+      "jobs": [
+        {
+          "job_id": 113192712863,
+          "name": "prepare",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "job_id": 113192830555,
+          "name": "execute (x86_64-unknown-linux-gnu, ubuntu-24.04)",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    }
+  ],
+  "fixes": [
+    {
+      "id": "verification_lint_components",
+      "commit": "a28fa547928a24a4fb5b45c74dfcc0dec6b70c98"
+    },
+    {
+      "id": "fixture_rustfmt_and_failure_stdout",
+      "commit": "388eaf8b4d52671eaa2843e8be0e6c6d6cbf6bfb"
+    },
+    {
+      "id": "cross_os_python_distribution",
+      "commit": "bf954740cb71f128058b6475a62cc084cf79053b"
+    },
+    {
+      "id": "msvc_vendor_script_quoting",
+      "commit": "15b99d0adfd25e6982748849ae123e32da8a134f"
+    },
+    {
+      "id": "tier_three_apple_build_std",
+      "commit": "15b99d0adfd25e6982748849ae123e32da8a134f"
+    }
+  ]
+}

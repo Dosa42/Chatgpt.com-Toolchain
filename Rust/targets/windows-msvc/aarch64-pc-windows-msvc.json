@@ -4,5 +4,5 @@
   "runner": "windows-2025",
   "can_execute": false,
   "rustup_target": "aarch64-pc-windows-msvc",
-  "verification_status": "not-run"
+  "verification_status": "passed"
 }

@@ -17,7 +17,7 @@ Each request is a JSON file conforming to ../schemas/request.schema.json. Use un
 | environment | Build environment additions; infrastructure control variables cannot be overridden. |
 | output | Additional generated source-tree globs and required product globs. |
 
-The included JSON requests point at real verification projects in this repository. They are ready to dispatch only when execution is explicitly requested; none has been executed. They do not stand in for a user's application.
+The included JSON requests point at real verification projects in this repository. Dispatch requires an explicit execution request. The test-* requests and dated verify-linux requests have execution evidence in [the verification record](../verification/results/2026-10-08.json). They do not stand in for a user's application.
 
 ## API dispatch helper
 
@@ -27,4 +27,4 @@ An API-capable agent with an authorized GH_TOKEN can run:
 python Rust/shared/github.py dispatch --workflow rust-build-linux.yml --ref main --request-path Rust/requests/build-linux-workspace.json --request-ref main --request-id build-linux-workspace
 ```
 
-This is an actual dispatch command, not a static check. Do not run it during the current write-only phase. Use find-run with the returned timestamp and request ID, then watch/download with the observed exact run ID. A plugin dispatch primitive or GitHub Run workflow interface can pass the same three inputs.
+This is an actual dispatch command, not a static check. Run it only for an explicitly requested build. Use find-run with the returned timestamp and request ID, then watch/download with the observed exact run ID. A plugin dispatch primitive or GitHub Run workflow interface can pass the same three inputs.

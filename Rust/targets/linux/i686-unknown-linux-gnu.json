@@ -4,7 +4,7 @@
   "runner": "ubuntu-24.04",
   "can_execute": false,
   "rustup_target": "i686-unknown-linux-gnu",
-  "verification_status": "not-run",
+  "verification_status": "passed",
   "apt_packages": [
     "gcc-multilib",
     "g++-multilib",

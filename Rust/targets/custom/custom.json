@@ -4,6 +4,6 @@
   "runner": "ubuntu-24.04",
   "can_execute": false,
   "rustup_target": null,
-  "verification_status": "not-run",
+  "verification_status": "passed",
   "custom": true
 }

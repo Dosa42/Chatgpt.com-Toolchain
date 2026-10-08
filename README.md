@@ -40,7 +40,8 @@
         "automatic_push_trigger": false,
         "automatic_pull_request_trigger": false,
         "automatic_schedule_trigger": false,
-        "workspace_compilation": false
+        "workspace_compilation": false,
+        "current_phase": "ready"
       }
     },
     "languages": {
@@ -51,7 +52,8 @@
           "descriptor": "Rust/README.md",
           "catalog": "Rust/catalog.json",
           "implementation": "written",
-          "runtime_verification": "not_run"
+          "runtime_verification": "passed",
+          "verification_record": "Rust/verification/results/2026-10-08.json"
         },
         "Go": {
           "root": "Go/",
@@ -138,10 +140,13 @@
       "const": {
         "implementation_commit": "6d6113d62f6b98064f701ef8aa8ae403463506dd",
         "implementation": "written",
-        "verification": "static_only",
-        "runtime_verification": "not_run",
-        "current_phase": "runtime_verification",
-        "current_phase_dispatch": true
+        "verification": "github_actions",
+        "runtime_verification": "passed",
+        "current_phase": "ready",
+        "current_phase_dispatch": true,
+        "verification_record": "Rust/verification/results/2026-10-08.json",
+        "verified_tasks": 18,
+        "verified_targets": 40
       }
     }
   },

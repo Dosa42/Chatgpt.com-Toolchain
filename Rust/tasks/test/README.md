@@ -2,7 +2,7 @@
 
 Task ID: `test`. Workflow: [`.github/workflows/rust-test.yml`](../../../.github/workflows/rust-test.yml).
 
-Status: implementation written; no GitHub Actions build has been executed or verified.
+Status: GitHub Actions verification passed for the recorded fixtures. [Verified run](https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742318162); [coverage and evidence](../../verification/results/2026-10-08.json).
 
 ## Usage
 
@@ -64,4 +64,4 @@ Execution requires a native executable target or `platform.runner`. `test.no_run
 | `i686-unknown-uefi` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 | `custom` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 
-Target configurations are written, not build-verified. See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+Target build coverage and task execution coverage are recorded separately in [verification evidence](../../verification/results/2026-10-08.json). See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).

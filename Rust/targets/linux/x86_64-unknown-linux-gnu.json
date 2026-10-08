@@ -4,7 +4,7 @@
   "runner": "ubuntu-24.04",
   "can_execute": true,
   "rustup_target": "x86_64-unknown-linux-gnu",
-  "verification_status": "not-run",
+  "verification_status": "passed",
   "apt_packages": [
     "build-essential",
     "pkg-config"

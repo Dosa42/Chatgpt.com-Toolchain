@@ -4,5 +4,5 @@
   "runner": "ubuntu-24.04",
   "can_execute": false,
   "rustup_target": "thumbv6m-none-eabi",
-  "verification_status": "not-run"
+  "verification_status": "passed"
 }

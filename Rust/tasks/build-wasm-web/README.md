@@ -2,7 +2,7 @@
 
 Task ID: `build-wasm-web`. Workflow: [`.github/workflows/rust-build-wasm-web.yml`](../../../.github/workflows/rust-build-wasm-web.yml).
 
-Status: implementation written; no GitHub Actions build has been executed or verified.
+Status: GitHub Actions verification passed for the recorded fixtures. [Verified run](https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742147982); [coverage and evidence](../../verification/results/2026-10-08.json).
 
 ## Usage
 
@@ -25,4 +25,4 @@ Enable `wasm.bindings` only for a project using wasm-bindgen. The CLI version is
 | --- | --- | --- |
 | `wasm32-unknown-unknown` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 
-Target configurations are written, not build-verified. See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+Target build coverage and task execution coverage are recorded separately in [verification evidence](../../verification/results/2026-10-08.json). See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).

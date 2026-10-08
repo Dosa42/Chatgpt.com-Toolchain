@@ -4,7 +4,7 @@
   "runner": "macos-15",
   "can_execute": false,
   "rustup_target": null,
-  "verification_status": "not-run",
+  "verification_status": "passed",
   "sdk": "watchsimulator",
   "build_std": [
     "std",

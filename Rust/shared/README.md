@@ -14,7 +14,7 @@ Python 3.12 standard library only. No local service or AI backend is needed.
 | artifacts.py | Actual workspace products, requested additional files and checksums. |
 | result.py | Success/failure reports and GitHub step summary. |
 | run.py | Request preparation, matrix construction and connected execution. |
-| verification.py | Future real build verification suite. |
+| verification.py | Real build verification suite with recorded runner results. |
 | render_workflows.py | Deterministic workflow file generation from catalog and action pins. |
 | github.py | Explicit API dispatch, run discovery/watch and binary artifact retrieval. |
 

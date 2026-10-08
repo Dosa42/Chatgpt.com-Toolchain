@@ -2,7 +2,7 @@
 
 Task ID: `build-custom`. Workflow: [`.github/workflows/rust-build-custom.yml`](../../../.github/workflows/rust-build-custom.yml).
 
-Status: implementation written; no GitHub Actions build has been executed or verified.
+Status: GitHub Actions verification passed for the recorded fixtures. [Verified run](https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742247684); [coverage and evidence](../../verification/results/2026-10-08.json).
 
 ## Usage
 
@@ -10,7 +10,7 @@ Create a request conforming to [request.schema.json](../../schemas/request.schem
 
 The default target is `custom` and default profile is `release`. Override them per request. The source is acquired separately from the infrastructure checkout. Setup calls the shared target and toolchain installers; execution calls the shared operation.
 
-Set `platform.custom_target` to a target JSON inside the source tree when selecting target `custom`. `build.build_std` requires an explicit nightly/custom toolchain. For a nonstandard toolchain use `toolchain.setup_commands`, `custom=true`, and its installed channel name. Commands are executed as argument vectors on the runner.
+Set `platform.custom_target` to a target JSON inside the source tree when selecting target `custom`. `build.build_std` selects the pinned nightly baseline unless the source or request selects another nightly/custom toolchain. For a nonstandard toolchain use `toolchain.setup_commands`, `custom=true`, and its installed channel name. Commands are executed as argument vectors on the runner.
 
 ## Files
 
@@ -64,4 +64,4 @@ Set `platform.custom_target` to a target JSON inside the source tree when select
 | `i686-unknown-uefi` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 | `custom` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 
-Target configurations are written, not build-verified. See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+Target build coverage and task execution coverage are recorded separately in [verification evidence](../../verification/results/2026-10-08.json). See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).

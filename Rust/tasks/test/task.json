@@ -10,5 +10,5 @@
     "x86_64-unknown-linux-gnu"
   ],
   "default_profile": "test",
-  "verification_status": "not-run"
+  "verification_status": "passed"
 }

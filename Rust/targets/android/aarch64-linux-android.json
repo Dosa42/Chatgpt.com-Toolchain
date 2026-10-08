@@ -4,6 +4,6 @@
   "runner": "ubuntu-24.04",
   "can_execute": false,
   "rustup_target": "aarch64-linux-android",
-  "verification_status": "not-run",
+  "verification_status": "passed",
   "android_clang": "aarch64-linux-android"
 }

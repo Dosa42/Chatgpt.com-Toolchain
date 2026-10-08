@@ -56,7 +56,7 @@
         "dispatch_event": "workflow_dispatch",
         "workspace_compile": false,
         "automatic_dispatch": false,
-        "current_phase": "runtime_verification",
+        "current_phase": "ready",
         "current_phase_dispatch": true
       }
     },
@@ -91,7 +91,8 @@
         "workflow_renderer": "Rust/shared/render_workflows.py",
         "workflow_path_lookup": "Rust/catalog.json#/tasks",
         "task_runtime_status_pointer": "/verification_status",
-        "target_runtime_status_pointer": "/verification_status"
+        "target_runtime_status_pointer": "/verification_status",
+        "verification_record": "Rust/verification/results/2026-10-08.json"
       }
     },
     "template_bindings": {
@@ -471,7 +472,9 @@
           "source_root": "Rust/verification/projects/",
           "enabled_in_current_phase": true,
           "trigger": "explicit_workflow_dispatch",
-          "status": "not_run"
+          "status": "passed",
+          "verification_record": "Rust/verification/results/2026-10-08.json",
+          "last_verified_run_id": 37743025443
         }
       }
     },
@@ -566,10 +569,13 @@
       "type": "object",
       "const": {
         "implementation": "written",
-        "runtime_verification": "not_run",
+        "runtime_verification": "passed",
         "task_status_source": "Rust/tasks/{task_id}/task.json#/verification_status",
         "target_status_source": "Rust/targets/{target_family}/{target_id}.json#/verification_status",
-        "current_phase": "runtime_verification"
+        "current_phase": "ready",
+        "verification_record": "Rust/verification/results/2026-10-08.json",
+        "verified_tasks": 18,
+        "verified_targets": 40
       }
     }
   },

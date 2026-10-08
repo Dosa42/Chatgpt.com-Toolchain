@@ -2,7 +2,7 @@
 
 Task ID: `build-macos`. Workflow: [`.github/workflows/rust-build-macos.yml`](../../../.github/workflows/rust-build-macos.yml).
 
-Status: implementation written; no GitHub Actions build has been executed or verified.
+Status: GitHub Actions verification passed for the recorded fixtures. [Verified run](https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742557654); [coverage and evidence](../../verification/results/2026-10-08.json).
 
 ## Usage
 
@@ -26,4 +26,4 @@ Project manifests, features, profiles and selected workspace members remain the 
 | `aarch64-apple-darwin` | `macos-15` | Yes |
 | `x86_64-apple-darwin` | `macos-15` | Build only; explicit runtime required for execution |
 
-Target configurations are written, not build-verified. See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+Target build coverage and task execution coverage are recorded separately in [verification evidence](../../verification/results/2026-10-08.json). See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).

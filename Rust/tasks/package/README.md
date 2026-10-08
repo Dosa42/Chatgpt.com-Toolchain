@@ -2,7 +2,7 @@
 
 Task ID: `package`. Workflow: [`.github/workflows/rust-package.yml`](../../../.github/workflows/rust-package.yml).
 
-Status: implementation written; no GitHub Actions build has been executed or verified.
+Status: GitHub Actions verification passed for the recorded fixtures. [Verified run](https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742427498); [coverage and evidence](../../verification/results/2026-10-08.json).
 
 ## Usage
 
@@ -64,4 +64,4 @@ Cargo package verification is enabled. No crates.io upload or GitHub release pub
 | `i686-unknown-uefi` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 | `custom` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 
-Target configurations are written, not build-verified. See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+Target build coverage and task execution coverage are recorded separately in [verification evidence](../../verification/results/2026-10-08.json). See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).

@@ -12,5 +12,5 @@
     "x86_64-unknown-uefi"
   ],
   "default_profile": "release",
-  "verification_status": "not-run"
+  "verification_status": "passed"
 }

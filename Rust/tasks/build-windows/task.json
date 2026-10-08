@@ -13,5 +13,5 @@
     "x86_64-pc-windows-msvc"
   ],
   "default_profile": "release",
-  "verification_status": "not-run"
+  "verification_status": "passed"
 }

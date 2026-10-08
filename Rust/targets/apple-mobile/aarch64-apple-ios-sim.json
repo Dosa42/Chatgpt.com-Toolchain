@@ -4,6 +4,6 @@
   "runner": "macos-15",
   "can_execute": false,
   "rustup_target": "aarch64-apple-ios-sim",
-  "verification_status": "not-run",
+  "verification_status": "passed",
   "sdk": "iphonesimulator"
 }

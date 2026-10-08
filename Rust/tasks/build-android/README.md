@@ -2,7 +2,7 @@
 
 Task ID: `build-android`. Workflow: [`.github/workflows/rust-build-android.yml`](../../../.github/workflows/rust-build-android.yml).
 
-Status: implementation written; no GitHub Actions build has been executed or verified.
+Status: GitHub Actions verification passed for the recorded fixtures. [Verified run](https://github.com/Dosa42/Chatgpt.com-Toolchain/actions/runs/37742103849); [coverage and evidence](../../verification/results/2026-10-08.json).
 
 ## Usage
 
@@ -28,4 +28,4 @@ The manifest must declare the intended binary or library crate type. A Rust nati
 | `x86_64-linux-android` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 | `i686-linux-android` | `ubuntu-24.04` | Build only; explicit runtime required for execution |
 
-Target configurations are written, not build-verified. See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
+Target build coverage and task execution coverage are recorded separately in [verification evidence](../../verification/results/2026-10-08.json). See [agent instructions](../../AGENTS.md), [request documentation](../../requests/README.md) and [result documentation](../../schemas/README.md).
