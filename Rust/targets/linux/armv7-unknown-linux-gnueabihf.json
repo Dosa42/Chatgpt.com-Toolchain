@@ -1,0 +1,14 @@
+{
+  "triple": "armv7-unknown-linux-gnueabihf",
+  "family": "linux",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "armv7-unknown-linux-gnueabihf",
+  "verification_status": "not-run",
+  "linker": "arm-linux-gnueabihf-gcc",
+  "apt_packages": [
+    "gcc-arm-linux-gnueabihf",
+    "g++-arm-linux-gnueabihf",
+    "pkg-config"
+  ]
+}

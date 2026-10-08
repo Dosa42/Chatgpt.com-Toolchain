@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "build-custom",
+  "title": "Custom target JSON and project-specific toolchains",
+  "directory": "Rust/tasks/build-custom",
+  "configuration": "Rust/tasks/build-custom/config/options.json",
+  "operation": "build",
+  "families": [],
+  "default_targets": [
+    "custom"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

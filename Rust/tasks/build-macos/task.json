@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "build-macos",
+  "title": "macOS Intel and Apple Silicon binaries and libraries",
+  "directory": "Rust/tasks/build-macos",
+  "configuration": "Rust/tasks/build-macos/config/options.json",
+  "operation": "build",
+  "families": [
+    "macos"
+  ],
+  "default_targets": [
+    "aarch64-apple-darwin"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

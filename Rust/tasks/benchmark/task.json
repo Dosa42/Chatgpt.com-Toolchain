@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "benchmark",
+  "title": "Project benchmarks on executable targets",
+  "directory": "Rust/tasks/benchmark",
+  "configuration": "Rust/tasks/benchmark/config/options.json",
+  "operation": "benchmark",
+  "families": [],
+  "default_targets": [
+    "x86_64-unknown-linux-gnu"
+  ],
+  "default_profile": "bench",
+  "verification_status": "not-run"
+}

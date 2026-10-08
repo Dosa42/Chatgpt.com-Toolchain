@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "build-windows-workspace",
+  "task": "build-windows",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true
+  }
+}

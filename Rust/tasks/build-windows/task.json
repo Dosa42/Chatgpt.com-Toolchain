@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "build-windows",
+  "title": "Windows MSVC and GNU binaries and libraries",
+  "directory": "Rust/tasks/build-windows",
+  "configuration": "Rust/tasks/build-windows/config/options.json",
+  "operation": "build",
+  "families": [
+    "windows-msvc",
+    "windows-gnu"
+  ],
+  "default_targets": [
+    "x86_64-pc-windows-msvc"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "build-embedded",
+  "title": "Embedded and bare-metal no_std projects",
+  "directory": "Rust/tasks/build-embedded",
+  "configuration": "Rust/tasks/build-embedded/config/options.json",
+  "operation": "build",
+  "families": [
+    "embedded"
+  ],
+  "default_targets": [
+    "thumbv7em-none-eabihf"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

@@ -1,0 +1,14 @@
+{
+  "triple": "x86_64-unknown-linux-musl",
+  "family": "linux",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "x86_64-unknown-linux-musl",
+  "verification_status": "not-run",
+  "linker": "musl-gcc",
+  "apt_packages": [
+    "musl-tools",
+    "build-essential",
+    "pkg-config"
+  ]
+}

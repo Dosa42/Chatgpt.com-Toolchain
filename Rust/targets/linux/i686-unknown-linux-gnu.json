@@ -1,0 +1,13 @@
+{
+  "triple": "i686-unknown-linux-gnu",
+  "family": "linux",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "i686-unknown-linux-gnu",
+  "verification_status": "not-run",
+  "apt_packages": [
+    "gcc-multilib",
+    "g++-multilib",
+    "pkg-config"
+  ]
+}

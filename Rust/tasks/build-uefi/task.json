@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "build-uefi",
+  "title": "UEFI applications",
+  "directory": "Rust/tasks/build-uefi",
+  "configuration": "Rust/tasks/build-uefi/config/options.json",
+  "operation": "build",
+  "families": [
+    "uefi"
+  ],
+  "default_targets": [
+    "x86_64-unknown-uefi"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

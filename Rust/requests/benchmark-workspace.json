@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "benchmark-workspace",
+  "task": "benchmark",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true
+  }
+}

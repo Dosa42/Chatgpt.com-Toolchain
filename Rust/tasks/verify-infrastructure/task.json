@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "verify-infrastructure",
+  "title": "Real infrastructure verification suite",
+  "directory": "Rust/tasks/verify-infrastructure",
+  "configuration": "Rust/tasks/verify-infrastructure/config/options.json",
+  "operation": "verify",
+  "families": [],
+  "default_targets": [
+    "x86_64-unknown-linux-gnu"
+  ],
+  "default_profile": "dev",
+  "verification_status": "not-run"
+}

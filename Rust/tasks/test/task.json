@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "test",
+  "title": "Unit, integration and documentation tests",
+  "directory": "Rust/tasks/test",
+  "configuration": "Rust/tasks/test/config/options.json",
+  "operation": "test",
+  "families": [],
+  "default_targets": [
+    "x86_64-unknown-linux-gnu"
+  ],
+  "default_profile": "test",
+  "verification_status": "not-run"
+}

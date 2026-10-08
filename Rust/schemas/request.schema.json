@@ -1,0 +1,383 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,79}$"
+    },
+    "task": {
+      "type": "string",
+      "enum": [
+        "build-linux",
+        "build-windows",
+        "build-macos",
+        "build-android",
+        "build-apple-mobile",
+        "build-wasm-web",
+        "build-wasi",
+        "build-embedded",
+        "build-uefi",
+        "build-custom",
+        "build-standalone",
+        "check",
+        "test",
+        "lint",
+        "docs",
+        "package",
+        "benchmark",
+        "verify-infrastructure"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "submodules": {
+          "type": "boolean"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "build": {
+      "type": "object",
+      "properties": {
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_.-]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "maxItems": 40
+        },
+        "manifest_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+        },
+        "workspace": {
+          "type": "boolean"
+        },
+        "packages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "exclude": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "bins": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "lib": {
+          "type": "boolean"
+        },
+        "all_targets": {
+          "type": "boolean"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "all_features": {
+          "type": "boolean"
+        },
+        "no_default_features": {
+          "type": "boolean"
+        },
+        "offline": {
+          "type": "boolean"
+        },
+        "build_std": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "cargo_config": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "toolchain": {
+      "type": "object",
+      "properties": {
+        "channel": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+$"
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "custom": {
+          "type": "boolean"
+        },
+        "setup_commands": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 100
+          },
+          "maxItems": 100
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "platform": {
+      "type": "object",
+      "properties": {
+        "ndk_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "android_api": {
+          "type": "integer",
+          "minimum": 21,
+          "maximum": 100
+        },
+        "linker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "custom_target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "xcode_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "apt_packages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9+.:=~_-]*$"
+          },
+          "uniqueItems": true
+        },
+        "setup_commands": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 100
+          },
+          "maxItems": 100
+        },
+        "runner": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "standalone": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "edition": {
+          "type": "string",
+          "enum": [
+            "2015",
+            "2018",
+            "2021",
+            "2024"
+          ]
+        },
+        "crate_type": {
+          "type": "string",
+          "enum": [
+            "bin",
+            "lib",
+            "rlib",
+            "dylib",
+            "cdylib",
+            "staticlib",
+            "proc-macro"
+          ]
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "wasm": {
+      "type": "object",
+      "properties": {
+        "bindings": {
+          "type": "boolean"
+        },
+        "bindgen_target": {
+          "type": "string",
+          "enum": [
+            "web",
+            "bundler",
+            "nodejs",
+            "no-modules",
+            "deno"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "test": {
+      "type": "object",
+      "properties": {
+        "no_run": {
+          "type": "boolean"
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "source_globs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        },
+        "required_globs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 100
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "task",
+    "source"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "request.schema.json",
+  "title": "Rust build request"
+}

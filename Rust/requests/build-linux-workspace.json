@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "build-linux-workspace",
+  "task": "build-linux",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "triple": "custom",
+  "family": "custom",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": null,
+  "verification_status": "not-run",
+  "custom": true
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "check",
+  "title": "Cargo compilation checks",
+  "directory": "Rust/tasks/check",
+  "configuration": "Rust/tasks/check/config/options.json",
+  "operation": "check",
+  "families": [],
+  "default_targets": [
+    "x86_64-unknown-linux-gnu"
+  ],
+  "default_profile": "dev",
+  "verification_status": "not-run"
+}

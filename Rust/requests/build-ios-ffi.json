@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "build-ios-ffi",
+  "task": "build-apple-mobile",
+  "source": {
+    "path": "Rust/verification/projects/apple-ffi"
+  },
+  "build": {
+    "lib": true
+  }
+}

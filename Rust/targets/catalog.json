@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "targets": [
+    {
+      "triple": "x86_64-unknown-linux-gnu",
+      "definition": "Rust/targets/linux/x86_64-unknown-linux-gnu.json"
+    },
+    {
+      "triple": "aarch64-unknown-linux-gnu",
+      "definition": "Rust/targets/linux/aarch64-unknown-linux-gnu.json"
+    },
+    {
+      "triple": "armv7-unknown-linux-gnueabihf",
+      "definition": "Rust/targets/linux/armv7-unknown-linux-gnueabihf.json"
+    },
+    {
+      "triple": "i686-unknown-linux-gnu",
+      "definition": "Rust/targets/linux/i686-unknown-linux-gnu.json"
+    },
+    {
+      "triple": "x86_64-unknown-linux-musl",
+      "definition": "Rust/targets/linux/x86_64-unknown-linux-musl.json"
+    },
+    {
+      "triple": "x86_64-pc-windows-msvc",
+      "definition": "Rust/targets/windows-msvc/x86_64-pc-windows-msvc.json"
+    },
+    {
+      "triple": "aarch64-pc-windows-msvc",
+      "definition": "Rust/targets/windows-msvc/aarch64-pc-windows-msvc.json"
+    },
+    {
+      "triple": "i686-pc-windows-msvc",
+      "definition": "Rust/targets/windows-msvc/i686-pc-windows-msvc.json"
+    },
+    {
+      "triple": "x86_64-pc-windows-gnu",
+      "definition": "Rust/targets/windows-gnu/x86_64-pc-windows-gnu.json"
+    },
+    {
+      "triple": "aarch64-apple-darwin",
+      "definition": "Rust/targets/macos/aarch64-apple-darwin.json"
+    },
+    {
+      "triple": "x86_64-apple-darwin",
+      "definition": "Rust/targets/macos/x86_64-apple-darwin.json"
+    },
+    {
+      "triple": "aarch64-linux-android",
+      "definition": "Rust/targets/android/aarch64-linux-android.json"
+    },
+    {
+      "triple": "armv7-linux-androideabi",
+      "definition": "Rust/targets/android/armv7-linux-androideabi.json"
+    },
+    {
+      "triple": "x86_64-linux-android",
+      "definition": "Rust/targets/android/x86_64-linux-android.json"
+    },
+    {
+      "triple": "i686-linux-android",
+      "definition": "Rust/targets/android/i686-linux-android.json"
+    },
+    {
+      "triple": "aarch64-apple-ios",
+      "definition": "Rust/targets/apple-mobile/aarch64-apple-ios.json"
+    },
+    {
+      "triple": "aarch64-apple-ios-sim",
+      "definition": "Rust/targets/apple-mobile/aarch64-apple-ios-sim.json"
+    },
+    {
+      "triple": "x86_64-apple-ios",
+      "definition": "Rust/targets/apple-mobile/x86_64-apple-ios.json"
+    },
+    {
+      "triple": "aarch64-apple-tvos",
+      "definition": "Rust/targets/apple-mobile/aarch64-apple-tvos.json"
+    },
+    {
+      "triple": "aarch64-apple-tvos-sim",
+      "definition": "Rust/targets/apple-mobile/aarch64-apple-tvos-sim.json"
+    },
+    {
+      "triple": "aarch64-apple-watchos",
+      "definition": "Rust/targets/apple-mobile/aarch64-apple-watchos.json"
+    },
+    {
+      "triple": "aarch64-apple-watchos-sim",
+      "definition": "Rust/targets/apple-mobile/aarch64-apple-watchos-sim.json"
+    },
+    {
+      "triple": "aarch64-apple-visionos",
+      "definition": "Rust/targets/apple-mobile/aarch64-apple-visionos.json"
+    },
+    {
+      "triple": "aarch64-apple-visionos-sim",
+      "definition": "Rust/targets/apple-mobile/aarch64-apple-visionos-sim.json"
+    },
+    {
+      "triple": "wasm32-unknown-unknown",
+      "definition": "Rust/targets/wasm-web/wasm32-unknown-unknown.json"
+    },
+    {
+      "triple": "wasm32-wasip1",
+      "definition": "Rust/targets/wasi/wasm32-wasip1.json"
+    },
+    {
+      "triple": "wasm32-wasip2",
+      "definition": "Rust/targets/wasi/wasm32-wasip2.json"
+    },
+    {
+      "triple": "thumbv6m-none-eabi",
+      "definition": "Rust/targets/embedded/thumbv6m-none-eabi.json"
+    },
+    {
+      "triple": "thumbv7m-none-eabi",
+      "definition": "Rust/targets/embedded/thumbv7m-none-eabi.json"
+    },
+    {
+      "triple": "thumbv7em-none-eabi",
+      "definition": "Rust/targets/embedded/thumbv7em-none-eabi.json"
+    },
+    {
+      "triple": "thumbv7em-none-eabihf",
+      "definition": "Rust/targets/embedded/thumbv7em-none-eabihf.json"
+    },
+    {
+      "triple": "thumbv8m.main-none-eabihf",
+      "definition": "Rust/targets/embedded/thumbv8m.main-none-eabihf.json"
+    },
+    {
+      "triple": "riscv32imac-unknown-none-elf",
+      "definition": "Rust/targets/embedded/riscv32imac-unknown-none-elf.json"
+    },
+    {
+      "triple": "riscv64imac-unknown-none-elf",
+      "definition": "Rust/targets/embedded/riscv64imac-unknown-none-elf.json"
+    },
+    {
+      "triple": "aarch64-unknown-none",
+      "definition": "Rust/targets/embedded/aarch64-unknown-none.json"
+    },
+    {
+      "triple": "x86_64-unknown-none",
+      "definition": "Rust/targets/embedded/x86_64-unknown-none.json"
+    },
+    {
+      "triple": "x86_64-unknown-uefi",
+      "definition": "Rust/targets/uefi/x86_64-unknown-uefi.json"
+    },
+    {
+      "triple": "aarch64-unknown-uefi",
+      "definition": "Rust/targets/uefi/aarch64-unknown-uefi.json"
+    },
+    {
+      "triple": "i686-unknown-uefi",
+      "definition": "Rust/targets/uefi/i686-unknown-uefi.json"
+    },
+    {
+      "triple": "custom",
+      "definition": "Rust/targets/custom/custom.json"
+    }
+  ]
+}

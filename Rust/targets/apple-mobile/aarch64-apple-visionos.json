@@ -1,0 +1,9 @@
+{
+  "triple": "aarch64-apple-visionos",
+  "family": "apple-mobile",
+  "runner": "macos-15",
+  "can_execute": false,
+  "rustup_target": "aarch64-apple-visionos",
+  "verification_status": "not-run",
+  "sdk": "xros"
+}

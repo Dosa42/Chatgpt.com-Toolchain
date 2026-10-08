@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "package",
+  "title": "Verified Cargo source packages",
+  "directory": "Rust/tasks/package",
+  "configuration": "Rust/tasks/package/config/options.json",
+  "operation": "package",
+  "families": [],
+  "default_targets": [
+    "x86_64-unknown-linux-gnu"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

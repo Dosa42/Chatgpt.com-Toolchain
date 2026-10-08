@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "build-embedded",
+  "task": "build-embedded",
+  "source": {
+    "path": "Rust/verification/projects/no-std"
+  },
+  "build": {
+    "lib": true
+  }
+}

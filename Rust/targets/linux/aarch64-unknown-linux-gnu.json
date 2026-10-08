@@ -1,0 +1,14 @@
+{
+  "triple": "aarch64-unknown-linux-gnu",
+  "family": "linux",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "aarch64-unknown-linux-gnu",
+  "verification_status": "not-run",
+  "linker": "aarch64-linux-gnu-gcc",
+  "apt_packages": [
+    "gcc-aarch64-linux-gnu",
+    "g++-aarch64-linux-gnu",
+    "pkg-config"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "build-wasi",
+  "title": "WASI Preview 1 modules and Preview 2 components",
+  "directory": "Rust/tasks/build-wasi",
+  "configuration": "Rust/tasks/build-wasi/config/options.json",
+  "operation": "build",
+  "families": [
+    "wasi"
+  ],
+  "default_targets": [
+    "wasm32-wasip1"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

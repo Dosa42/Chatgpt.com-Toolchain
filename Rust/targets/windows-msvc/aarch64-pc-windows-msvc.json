@@ -1,0 +1,8 @@
+{
+  "triple": "aarch64-pc-windows-msvc",
+  "family": "windows-msvc",
+  "runner": "windows-2025",
+  "can_execute": false,
+  "rustup_target": "aarch64-pc-windows-msvc",
+  "verification_status": "not-run"
+}

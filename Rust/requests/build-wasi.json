@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "build-wasi",
+  "task": "build-wasi",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "packages": [
+      "toolchain-cli"
+    ]
+  }
+}

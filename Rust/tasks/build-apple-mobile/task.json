@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "build-apple-mobile",
+  "title": "Apple device and simulator libraries",
+  "directory": "Rust/tasks/build-apple-mobile",
+  "configuration": "Rust/tasks/build-apple-mobile/config/options.json",
+  "operation": "build",
+  "families": [
+    "apple-mobile"
+  ],
+  "default_targets": [
+    "aarch64-apple-ios"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

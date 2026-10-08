@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "build-linux",
+  "title": "Linux binaries and libraries",
+  "directory": "Rust/tasks/build-linux",
+  "configuration": "Rust/tasks/build-linux/config/options.json",
+  "operation": "build",
+  "families": [
+    "linux"
+  ],
+  "default_targets": [
+    "x86_64-unknown-linux-gnu"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "docs",
+  "title": "Rustdoc HTML documentation",
+  "directory": "Rust/tasks/docs",
+  "configuration": "Rust/tasks/docs/config/options.json",
+  "operation": "docs",
+  "families": [],
+  "default_targets": [
+    "x86_64-unknown-linux-gnu"
+  ],
+  "default_profile": "dev",
+  "verification_status": "not-run"
+}

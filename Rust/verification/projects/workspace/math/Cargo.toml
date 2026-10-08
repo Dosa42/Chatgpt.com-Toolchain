@@ -1,0 +1,11 @@
+[package]
+name = "toolchain-math"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Checked arithmetic used to verify the Rust build infrastructure"
+license = "MIT"
+
+[[bench]]
+name = "gcd"
+harness = false

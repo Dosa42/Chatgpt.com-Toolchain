@@ -1,0 +1,9 @@
+{
+  "triple": "armv7-linux-androideabi",
+  "family": "android",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "armv7-linux-androideabi",
+  "verification_status": "not-run",
+  "android_clang": "armv7a-linux-androideabi"
+}

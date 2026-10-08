@@ -78,7 +78,7 @@ Each language directory contains task-specific subdirectories. Each task directo
 | `C++/<task>/` | Instructions, scripts, and configuration for a C++ build task. |
 | `.github/workflows/` | Executable GitHub Actions workflow entry points for those tasks. |
 
-These paths describe the intended organization; task directories and workflows will be added with their implementations.
+Rust task directories are implemented under `Rust/tasks/<task>/`; their GitHub workflow entry points are under `.github/workflows/`. Other languages will follow the same language-based organization when implemented.
 
 ### GitHub Actions workflow placement
 
@@ -108,7 +108,7 @@ The language-based root structure and task-specific organization are established
 
 ## Current status
 
-This repository is at its initial documentation stage.
+The Rust infrastructure has been written and connected. See [Rust/README.md](Rust/README.md) and [Rust/catalog.json](Rust/catalog.json) for all tasks and workflows. No GitHub Actions build has been started or verified during this implementation stage.
 
 The confirmed direction is:
 
@@ -121,7 +121,7 @@ The confirmed direction is:
 - The repository is organized into language directories and task-specific subdirectories, with workflow entry points in GitHub's required location.
 - Infrastructure organization and drift prevention are central requirements.
 
-Build workflows and toolchain implementations have not yet been added. The integration details remain to be specified.
+Rust task implementations, shared build code, target definitions, machine-readable schemas and dispatch-only workflows are now present. Their execution and platform behavior remain unverified until the later testing phase. Go, C and C++ infrastructure has not been implemented yet.
 
 ## Guidance for agents
 
@@ -130,3 +130,4 @@ Read this README before extending the repository.
 Keep implementation aligned with the confirmed build flow, directory organization, and execution boundary. Derive technical build settings from the source and requested result. Reuse suitable infrastructure, document new capabilities, and distinguish planned features from working features.
 
 Report build success only when an actual GitHub Actions run supports that result. Update this README as implementation decisions and verified capabilities become available.
+

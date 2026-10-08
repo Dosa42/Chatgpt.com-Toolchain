@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "build-wasm-web",
+  "title": "Browser WebAssembly with optional matched wasm-bindgen CLI",
+  "directory": "Rust/tasks/build-wasm-web",
+  "configuration": "Rust/tasks/build-wasm-web/config/options.json",
+  "operation": "build",
+  "families": [
+    "wasm-web"
+  ],
+  "default_targets": [
+    "wasm32-unknown-unknown"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

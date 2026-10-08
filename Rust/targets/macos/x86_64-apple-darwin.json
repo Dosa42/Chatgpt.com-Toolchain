@@ -1,0 +1,9 @@
+{
+  "triple": "x86_64-apple-darwin",
+  "family": "macos",
+  "runner": "macos-15",
+  "can_execute": false,
+  "rustup_target": "x86_64-apple-darwin",
+  "verification_status": "not-run",
+  "sdk": "macosx"
+}

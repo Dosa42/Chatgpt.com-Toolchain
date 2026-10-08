@@ -1,0 +1,8 @@
+{
+  "triple": "i686-pc-windows-msvc",
+  "family": "windows-msvc",
+  "runner": "windows-2025",
+  "can_execute": true,
+  "rustup_target": "i686-pc-windows-msvc",
+  "verification_status": "not-run"
+}

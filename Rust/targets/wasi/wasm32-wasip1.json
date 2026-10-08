@@ -1,0 +1,8 @@
+{
+  "triple": "wasm32-wasip1",
+  "family": "wasi",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "wasm32-wasip1",
+  "verification_status": "not-run"
+}

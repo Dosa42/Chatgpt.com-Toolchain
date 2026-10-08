@@ -1,0 +1,7 @@
+{
+  "rustup": "1.28.2",
+  "rust_channel_source": "Rust/toolchains/pins.json",
+  "runner_images_mutable": true,
+  "build_cache": false,
+  "dependency_download_cache": true
+}

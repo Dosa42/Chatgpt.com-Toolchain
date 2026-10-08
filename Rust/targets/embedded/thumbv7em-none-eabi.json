@@ -1,0 +1,8 @@
+{
+  "triple": "thumbv7em-none-eabi",
+  "family": "embedded",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "thumbv7em-none-eabi",
+  "verification_status": "not-run"
+}

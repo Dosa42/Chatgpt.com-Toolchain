@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "build-macos-workspace",
+  "task": "build-macos",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true
+  }
+}

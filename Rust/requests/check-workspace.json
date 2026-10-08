@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "check-workspace",
+  "task": "check",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true
+  }
+}

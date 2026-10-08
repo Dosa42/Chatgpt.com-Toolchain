@@ -1,0 +1,13 @@
+{
+  "triple": "x86_64-pc-windows-gnu",
+  "family": "windows-gnu",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "x86_64-pc-windows-gnu",
+  "verification_status": "not-run",
+  "linker": "x86_64-w64-mingw32-gcc",
+  "apt_packages": [
+    "gcc-mingw-w64-x86-64",
+    "g++-mingw-w64-x86-64"
+  ]
+}

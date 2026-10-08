@@ -1,0 +1,8 @@
+{
+  "triple": "aarch64-unknown-uefi",
+  "family": "uefi",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "aarch64-unknown-uefi",
+  "verification_status": "not-run"
+}

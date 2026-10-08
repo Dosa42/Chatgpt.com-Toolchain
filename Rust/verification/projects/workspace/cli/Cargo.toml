@@ -1,0 +1,8 @@
+[package]
+name = "toolchain-cli"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+toolchain-math = { version = "0.1.0", path = "../math" }

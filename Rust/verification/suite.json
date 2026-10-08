@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "workspace-build",
+      "task": "build-linux",
+      "project": "workspace",
+      "build": {
+        "workspace": true
+      }
+    },
+    {
+      "id": "workspace-check",
+      "task": "check",
+      "project": "workspace",
+      "build": {
+        "workspace": true
+      }
+    },
+    {
+      "id": "workspace-tests",
+      "task": "test",
+      "project": "workspace",
+      "build": {
+        "workspace": true
+      }
+    },
+    {
+      "id": "workspace-lint",
+      "task": "lint",
+      "project": "workspace",
+      "build": {
+        "workspace": true
+      }
+    },
+    {
+      "id": "workspace-docs",
+      "task": "docs",
+      "project": "workspace",
+      "build": {
+        "workspace": true
+      }
+    },
+    {
+      "id": "crate-package",
+      "task": "package",
+      "project": "workspace",
+      "build": {
+        "packages": [
+          "toolchain-math"
+        ]
+      }
+    },
+    {
+      "id": "workspace-benchmark",
+      "task": "benchmark",
+      "project": "workspace",
+      "build": {
+        "packages": [
+          "toolchain-math"
+        ]
+      }
+    },
+    {
+      "id": "ffi-libraries",
+      "task": "build-linux",
+      "project": "ffi",
+      "build": {
+        "lib": true
+      }
+    },
+    {
+      "id": "standalone-rustc",
+      "task": "build-standalone",
+      "project": "standalone",
+      "standalone": {
+        "source": "main.rs",
+        "edition": "2021",
+        "crate_type": "bin"
+      }
+    }
+  ]
+}

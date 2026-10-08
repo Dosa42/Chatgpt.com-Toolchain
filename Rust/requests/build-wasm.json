@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "build-wasm",
+  "task": "build-wasm-web",
+  "source": {
+    "path": "Rust/verification/projects/wasm"
+  },
+  "build": {
+    "lib": true
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "enum": [
+        "build-linux",
+        "build-windows",
+        "build-macos",
+        "build-android",
+        "build-apple-mobile",
+        "build-wasm-web",
+        "build-wasi",
+        "build-embedded",
+        "build-uefi",
+        "build-custom",
+        "build-standalone",
+        "check",
+        "test",
+        "lint",
+        "docs",
+        "package",
+        "benchmark",
+        "verify-infrastructure"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "directory": {
+      "type": "string",
+      "minLength": 1
+    },
+    "configuration": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operation": {
+      "type": "string",
+      "enum": [
+        "build",
+        "standalone",
+        "check",
+        "test",
+        "lint",
+        "docs",
+        "package",
+        "benchmark",
+        "verify"
+      ]
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "maxItems": 100
+    },
+    "default_targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "default_profile": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "not-run",
+        "passed",
+        "failed"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "directory",
+    "configuration",
+    "operation",
+    "families",
+    "default_targets",
+    "default_profile",
+    "verification_status"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

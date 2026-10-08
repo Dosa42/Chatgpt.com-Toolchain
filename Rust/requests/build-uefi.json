@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "build-uefi",
+  "task": "build-uefi",
+  "source": {
+    "path": "Rust/verification/projects/uefi"
+  }
+}

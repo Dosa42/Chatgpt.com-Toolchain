@@ -1,0 +1,8 @@
+{
+  "triple": "wasm32-unknown-unknown",
+  "family": "wasm-web",
+  "runner": "ubuntu-24.04",
+  "can_execute": false,
+  "rustup_target": "wasm32-unknown-unknown",
+  "verification_status": "not-run"
+}

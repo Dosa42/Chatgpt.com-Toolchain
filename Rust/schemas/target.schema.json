@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "properties": {
+    "triple": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+$"
+    },
+    "family": {
+      "type": "string"
+    },
+    "runner": {
+      "type": "string"
+    },
+    "can_execute": {
+      "type": "boolean"
+    },
+    "rustup_target": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "not-run",
+        "passed",
+        "failed"
+      ]
+    },
+    "apt_packages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "maxItems": 100
+    },
+    "linker": {
+      "type": "string"
+    },
+    "sdk": {
+      "type": "string"
+    },
+    "android_clang": {
+      "type": "string"
+    },
+    "custom": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "triple",
+    "family",
+    "runner",
+    "can_execute",
+    "rustup_target",
+    "verification_status"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

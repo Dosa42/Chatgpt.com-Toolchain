@@ -1,0 +1,9 @@
+{
+  "triple": "x86_64-apple-ios",
+  "family": "apple-mobile",
+  "runner": "macos-15",
+  "can_execute": false,
+  "rustup_target": "x86_64-apple-ios",
+  "verification_status": "not-run",
+  "sdk": "iphonesimulator"
+}

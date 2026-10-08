@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "build-android",
+  "title": "Android native binaries and libraries with NDK",
+  "directory": "Rust/tasks/build-android",
+  "configuration": "Rust/tasks/build-android/config/options.json",
+  "operation": "build",
+  "families": [
+    "android"
+  ],
+  "default_targets": [
+    "aarch64-linux-android"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

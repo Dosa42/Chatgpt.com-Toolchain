@@ -1,0 +1,9 @@
+{
+  "triple": "aarch64-apple-ios-sim",
+  "family": "apple-mobile",
+  "runner": "macos-15",
+  "can_execute": false,
+  "rustup_target": "aarch64-apple-ios-sim",
+  "verification_status": "not-run",
+  "sdk": "iphonesimulator"
+}

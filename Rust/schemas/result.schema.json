@@ -1,0 +1,104 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "failure"
+      ]
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,79}$"
+    },
+    "task": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    },
+    "request_commit": {
+      "type": "string"
+    },
+    "infrastructure_commit": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "run_attempt": {
+      "type": "string"
+    },
+    "run_url": {
+      "type": "string"
+    },
+    "runner": {
+      "type": "object"
+    },
+    "versions": {
+      "type": "object"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "bytes",
+          "sha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "completed_at": {
+      "type": "string"
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "request_id",
+    "task",
+    "target",
+    "source",
+    "request_commit",
+    "infrastructure_commit",
+    "run_id",
+    "run_attempt",
+    "run_url",
+    "runner",
+    "versions",
+    "artifacts",
+    "completed_at",
+    "error"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

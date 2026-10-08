@@ -1,0 +1,5 @@
+version = 3
+
+[[package]]
+name = "toolchain-wasm"
+version = "0.1.0"

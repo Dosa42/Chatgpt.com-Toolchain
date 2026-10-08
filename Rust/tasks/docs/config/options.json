@@ -1,0 +1,6 @@
+{
+  "artifact_exclude_suffixes": [
+    ".rmeta",
+    ".d"
+  ]
+}

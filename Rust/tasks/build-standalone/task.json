@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "build-standalone",
+  "title": "Direct rustc compilation without Cargo",
+  "directory": "Rust/tasks/build-standalone",
+  "configuration": "Rust/tasks/build-standalone/config/options.json",
+  "operation": "standalone",
+  "families": [],
+  "default_targets": [
+    "x86_64-unknown-linux-gnu"
+  ],
+  "default_profile": "release",
+  "verification_status": "not-run"
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "id": "build-linux",
+      "definition": "Rust/tasks/build-linux/task.json",
+      "workflow": ".github/workflows/rust-build-linux.yml"
+    },
+    {
+      "id": "build-windows",
+      "definition": "Rust/tasks/build-windows/task.json",
+      "workflow": ".github/workflows/rust-build-windows.yml"
+    },
+    {
+      "id": "build-macos",
+      "definition": "Rust/tasks/build-macos/task.json",
+      "workflow": ".github/workflows/rust-build-macos.yml"
+    },
+    {
+      "id": "build-android",
+      "definition": "Rust/tasks/build-android/task.json",
+      "workflow": ".github/workflows/rust-build-android.yml"
+    },
+    {
+      "id": "build-apple-mobile",
+      "definition": "Rust/tasks/build-apple-mobile/task.json",
+      "workflow": ".github/workflows/rust-build-apple-mobile.yml"
+    },
+    {
+      "id": "build-wasm-web",
+      "definition": "Rust/tasks/build-wasm-web/task.json",
+      "workflow": ".github/workflows/rust-build-wasm-web.yml"
+    },
+    {
+      "id": "build-wasi",
+      "definition": "Rust/tasks/build-wasi/task.json",
+      "workflow": ".github/workflows/rust-build-wasi.yml"
+    },
+    {
+      "id": "build-embedded",
+      "definition": "Rust/tasks/build-embedded/task.json",
+      "workflow": ".github/workflows/rust-build-embedded.yml"
+    },
+    {
+      "id": "build-uefi",
+      "definition": "Rust/tasks/build-uefi/task.json",
+      "workflow": ".github/workflows/rust-build-uefi.yml"
+    },
+    {
+      "id": "build-custom",
+      "definition": "Rust/tasks/build-custom/task.json",
+      "workflow": ".github/workflows/rust-build-custom.yml"
+    },
+    {
+      "id": "build-standalone",
+      "definition": "Rust/tasks/build-standalone/task.json",
+      "workflow": ".github/workflows/rust-build-standalone.yml"
+    },
+    {
+      "id": "check",
+      "definition": "Rust/tasks/check/task.json",
+      "workflow": ".github/workflows/rust-check.yml"
+    },
+    {
+      "id": "test",
+      "definition": "Rust/tasks/test/task.json",
+      "workflow": ".github/workflows/rust-test.yml"
+    },
+    {
+      "id": "lint",
+      "definition": "Rust/tasks/lint/task.json",
+      "workflow": ".github/workflows/rust-lint.yml"
+    },
+    {
+      "id": "docs",
+      "definition": "Rust/tasks/docs/task.json",
+      "workflow": ".github/workflows/rust-docs.yml"
+    },
+    {
+      "id": "package",
+      "definition": "Rust/tasks/package/task.json",
+      "workflow": ".github/workflows/rust-package.yml"
+    },
+    {
+      "id": "benchmark",
+      "definition": "Rust/tasks/benchmark/task.json",
+      "workflow": ".github/workflows/rust-benchmark.yml"
+    },
+    {
+      "id": "verify-infrastructure",
+      "definition": "Rust/tasks/verify-infrastructure/task.json",
+      "workflow": ".github/workflows/rust-verify-infrastructure.yml"
+    }
+  ]
+}
