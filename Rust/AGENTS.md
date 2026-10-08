@@ -12,6 +12,6 @@ Keep source files under sources/<request-id>/, requests under requests/, and run
 
 Implementation and verification are separate states. All newly written tasks and targets currently have verification_status=not-run. Do not mark them verified because syntax checks passed. Report success only for an actual successful run with its requested deliverables.
 
-The user's current instruction is to write and connect infrastructure without starting builds. No workflow should be dispatched during this implementation stage. Static syntax and connection checks are allowed. A future explicit build/test request authorizes the corresponding execution.
+The current explicit test request authorizes GitHub Actions verification and debugging. Compile and execute builds only on GitHub Actions runners. Local static checks remain available. Workflow execution must match the requested test task; static success does not imply runtime success.
 
 Use plugin capabilities for GitHub reads/writes/artifact retrieval. If dispatch is available, invoke it with the exact workflow and request. shared/github.py provides real authenticated API dispatch/tracking/download functions when an API-capable execution path is available; never claim that the currently exposed plugin has a tool it does not expose.

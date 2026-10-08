@@ -59,7 +59,11 @@ def setup(context):
         run(["rustup", "toolchain", "install", concrete, "--profile", "minimal"],
             env=context.env, log=context.log)
     components = set(source.get("components", [])) | set(requested.get("components", []))
-    if context.definition["id"] == "lint":
+    active_tasks = {context.definition["id"]}
+    if "verify-infrastructure" in active_tasks:
+        suite = read_json(RUST / "verification/suite.json")
+        active_tasks.update(case["task"] for case in suite["cases"])
+    if "lint" in active_tasks:
         components.update(("rustfmt", "clippy"))
     if context.request.get("build", {}).get("build_std"):
         if "nightly" not in concrete and not requested.get("custom", False):

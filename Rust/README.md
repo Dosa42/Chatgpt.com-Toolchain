@@ -56,8 +56,8 @@
         "dispatch_event": "workflow_dispatch",
         "workspace_compile": false,
         "automatic_dispatch": false,
-        "current_phase": "configuration_review",
-        "current_phase_dispatch": false
+        "current_phase": "runtime_verification",
+        "current_phase_dispatch": true
       }
     },
     "navigation": {
@@ -192,7 +192,7 @@
           "commit_local_source": true
         },
         "dispatch": {
-          "enabled_in_current_phase": false,
+          "enabled_in_current_phase": true,
           "event": "workflow_dispatch",
           "workflow_lookup": "Rust/catalog.json#/tasks",
           "workflow_default_branch_presence_required": true,
@@ -462,7 +462,7 @@
           "suite": "Rust/verification/suite.json",
           "implementation": "Rust/shared/verification.py",
           "source_root": "Rust/verification/projects/",
-          "enabled_in_current_phase": false,
+          "enabled_in_current_phase": true,
           "trigger": "explicit_workflow_dispatch",
           "status": "not_run"
         }
@@ -562,7 +562,7 @@
         "runtime_verification": "not_run",
         "task_status_source": "Rust/tasks/{task_id}/task.json#/verification_status",
         "target_status_source": "Rust/targets/{target_family}/{target_id}.json#/verification_status",
-        "current_phase": "configuration_review"
+        "current_phase": "runtime_verification"
       }
     }
   },

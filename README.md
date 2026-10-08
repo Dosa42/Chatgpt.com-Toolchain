@@ -140,8 +140,8 @@
         "implementation": "written",
         "verification": "static_only",
         "runtime_verification": "not_run",
-        "current_phase": "configuration_review",
-        "current_phase_dispatch": false
+        "current_phase": "runtime_verification",
+        "current_phase_dispatch": true
       }
     }
   },
