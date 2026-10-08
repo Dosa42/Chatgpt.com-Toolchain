@@ -3,7 +3,7 @@
   "cache": "0057852bfaa89a56745cba8c7296529d2fc39830",
   "setup_python": "ece7cb06caefa5fff74198d8649806c4678c61a1",
   "upload_artifact": "ea165f8d65b6e75b540449e92b4886f43607fa02",
-  "python": "3.12.12",
+  "python": "3.12.10",
   "rust": "1.90.0",
   "ndk": "27.2.12479018"
 }

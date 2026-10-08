@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "test-build-apple-mobile-20261008-0720",
+  "task": "build-apple-mobile",
+  "source": {
+    "path": "Rust/verification/projects/apple-ffi"
+  },
+  "build": {
+    "lib": true,
+    "targets": [
+      "aarch64-apple-ios",
+      "aarch64-apple-ios-sim",
+      "x86_64-apple-ios",
+      "aarch64-apple-tvos",
+      "aarch64-apple-tvos-sim",
+      "aarch64-apple-watchos",
+      "aarch64-apple-watchos-sim",
+      "aarch64-apple-visionos",
+      "aarch64-apple-visionos-sim"
+    ]
+  }
+}

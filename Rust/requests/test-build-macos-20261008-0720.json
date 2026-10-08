@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "test-build-macos-20261008-0720",
+  "task": "build-macos",
+  "source": {
+    "path": "Rust/verification/projects/workspace"
+  },
+  "build": {
+    "workspace": true,
+    "targets": [
+      "aarch64-apple-darwin",
+      "x86_64-apple-darwin"
+    ]
+  }
+}
